@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="" />
+    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/sample/PlayTurn.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/PlayTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -22,6 +27,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -66,6 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578384695615</updated>
       <workItem from="1578384697005" duration="1368000" />
+      <workItem from="1578388087976" duration="1072000" />
     </task>
     <servers />
   </component>
@@ -77,7 +84,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
