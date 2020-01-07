@@ -3,11 +3,17 @@ package sample;
 import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class PlayTurn {
     private String[] player = {"Yellow" , "Green", "Blue", "Red"};
@@ -61,6 +67,16 @@ public class PlayTurn {
 
     @FXML
     private Button setAllName;
+
+    @FXML
+    private Button PlayButton;
+
+    @FXML
+    void PlayButtonClicked(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../sample/GamePlay.fxml"));
+        Stage stage = (Stage) PlayButton.getScene().getWindow();
+        stage.setScene(new Scene(root, 970, 720));
+    }
 
     @FXML
     void rollDiceClicked(ActionEvent event) {

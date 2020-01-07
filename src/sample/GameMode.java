@@ -27,7 +27,7 @@ public class GameMode {
     }
 
     public void startGameClicked(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../sample/GamePlay.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../sample/PlayTurn.fxml"));
         Stage stage = (Stage) returnButton.getScene().getWindow();
         stage.setScene(new Scene(root, 970, 720));
     }
