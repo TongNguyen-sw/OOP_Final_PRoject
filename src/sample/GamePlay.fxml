@@ -54,241 +54,242 @@
                            </effect>
                         </ImageView>
                         <Label layoutX="10.0" layoutY="8.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                        <Label layoutX="81.0" layoutY="39.0" prefHeight="17.0" prefWidth="61.0" text="Label" />
                      </children>
                   </AnchorPane>
                </children>
             </StackPane>
-                <StackPane fx:id="y1" layoutX="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c1" layoutX="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="4.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y5" layoutX="250.0" layoutY="200.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c5" layoutX="250.0" layoutY="200.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y4" layoutX="250.0" layoutY="150.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c4" layoutX="250.0" layoutY="150.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y3" layoutX="250.0" layoutY="100.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c3" layoutX="250.0" layoutY="100.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y2" layoutX="250.0" layoutY="50.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c2" layoutX="250.0" layoutY="50.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g7" layoutX="469.0" layoutY="200.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c43" layoutX="469.0" layoutY="200.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g8" layoutX="469.0" layoutY="151.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c44" layoutX="469.0" layoutY="151.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g9" layoutX="469.0" layoutY="100.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c45" layoutX="469.0" layoutY="100.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g10" layoutX="469.0" layoutY="50.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c46" layoutX="469.0" layoutY="50.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g11" layoutX="469.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c47" layoutX="469.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b0" layoutX="2.0" layoutY="336.0" prefHeight="44.0" prefWidth="34.0">
+                <StackPane fx:id="c12" layoutX="2.0" layoutY="336.0" prefHeight="44.0" prefWidth="34.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b11" layoutX="250.0" layoutY="666.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c23" layoutX="250.0" layoutY="666.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b10" layoutX="250.0" layoutY="616.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c22" layoutX="250.0" layoutY="616.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b9" layoutX="250.0" layoutY="566.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c21" layoutX="250.0" layoutY="566.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b8" layoutX="250.0" layoutY="516.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c20" layoutX="250.0" layoutY="516.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b7" layoutX="250.0" layoutY="466.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c19" layoutX="250.0" layoutY="466.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b6" layoutX="250.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c18" layoutX="250.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b5" layoutX="200.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c17" layoutX="200.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b4" layoutX="150.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c16" layoutX="150.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b3" layoutX="100.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c15" layoutX="100.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b2" layoutX="50.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c14" layoutX="50.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="b1" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c13" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="4.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y6" layoutX="250.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c6" layoutX="250.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y11" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c11" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y10" layoutX="50.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c10" layoutX="50.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y9" layoutX="100.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c9" layoutX="100.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y8" layoutX="150.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c8" layoutX="150.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="y7" layoutX="200.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c7" layoutX="200.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r9" layoutX="619.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c33" layoutX="619.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r10" layoutX="669.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c34" layoutX="669.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g3" layoutX="619.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c39" layoutX="619.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g1" layoutX="719.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c37" layoutX="719.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="4.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g2" layoutX="669.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c38" layoutX="669.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r8" layoutX="569.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c32" layoutX="569.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r7" layoutX="519.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c31" layoutX="519.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r1" layoutX="469.0" layoutY="666.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c25" layoutX="469.0" layoutY="666.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="4.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r2" layoutX="469.0" layoutY="616.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c26" layoutX="469.0" layoutY="616.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r3" layoutX="469.0" layoutY="566.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c27" layoutX="469.0" layoutY="566.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r4" layoutX="469.0" layoutY="516.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c28" layoutX="469.0" layoutY="516.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r5" layoutX="469.0" layoutY="466.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c29" layoutX="469.0" layoutY="466.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r6" layoutX="469.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c30" layoutX="469.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g4" layoutX="569.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c40" layoutX="569.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g5" layoutX="519.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c41" layoutX="519.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g6" layoutX="469.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c42" layoutX="469.0" layoutY="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r11" layoutX="719.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c35" layoutX="719.0" layoutY="416.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="r0" layoutX="355.0" layoutY="666.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c24" layoutX="355.0" layoutY="666.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane fx:id="g0" layoutX="719.0" layoutY="334.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c36" layoutX="719.0" layoutY="334.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
@@ -373,7 +374,7 @@
                         </AnchorPane>
                     </children>
                 </StackPane>
-                <StackPane fx:id="y0" layoutX="355.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane fx:id="c0" layoutX="355.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
