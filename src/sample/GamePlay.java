@@ -39,43 +39,8 @@ public class GamePlay {
     @FXML
     SplitPane gamePlay;
 
-    RollDices d1 = new RollDices();
-    RollDices d2 = new RollDices();
-    Media media = new Media(new File("src/sample/sound/dice.mp3").toURI().toString());
-    MediaPlayer diceSound = new MediaPlayer(media);
 
-    public void initialize(){
-        dice1.setImage(new Image("file:src/Image/" + d1.Rolldice() + ".png"));
-        dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
-    }
 
-    public void rotatedDice1(){
-        RotateTransition rt = new RotateTransition(javafx.util.Duration.seconds(0.5),dice1);
-        rt.setFromAngle(0);
-        rt.setToAngle(360);
-        rt.setOnFinished(actionEvent -> {
-            dice1.setImage(new Image("file:src/Image/" + d1.Rolldice() + ".png"));
-            value1.setImage(new Image("file:src/Image/" + d1.getValue() + ".png"));
-        });rt.play();
-    }
-
-    public void rotatedDice2(){
-        RotateTransition rt = new RotateTransition(Duration.seconds(0.5),dice2);
-        rt.setFromAngle(0);
-        rt.setToAngle(360);
-        rt.setOnFinished(actionEvent -> {
-            dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
-            value2.setImage(new Image("file:src/Image/" + d2.getValue() + ".png"));
-            diceSound.stop();
-        });rt.play();
-    }
-
-    public void clickedRoll(ActionEvent event){
-        rotatedDice1();
-        rotatedDice2();
-        diceSound.setCycleCount(MediaPlayer.INDEFINITE);
-        diceSound.play();
-    }
     public void stopClicked(ActionEvent actionEvent) throws IOException {
         Stage primaryStage = (Stage) stop.getScene().getWindow();
         GaussianBlur blur = new GaussianBlur(3);

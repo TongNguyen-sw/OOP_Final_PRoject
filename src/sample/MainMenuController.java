@@ -33,9 +33,7 @@ public class MainMenuController {
     }
 
     public void settingsClicked(ActionEvent actionEvent) {
-    }
 
-    public void highScoresClicked(ActionEvent actionEvent) {
     }
 
     public void exitClicked(ActionEvent actionEvent) throws IOException {
