@@ -5,27 +5,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="mainMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url('/Image/whitehorse.jpg'); -fx-background-size: cover" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainMenuController">
+<AnchorPane fx:id="mainMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="970.0" style="-fx-background-image: url('/Image/whitehorse.jpg'); -fx-background-size: cover" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainMenuController">
    <children>
-      <VBox layoutX="275.0" layoutY="150.0" prefHeight="355.0" prefWidth="300.0">
+      <VBox layoutX="359.0" layoutY="172.0" prefHeight="355.0" prefWidth="252.0">
          <children>
-            <Button fx:id="play" mnemonicParsing="false" onAction="#playClicked" prefHeight="60.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Play">
+            <Button fx:id="play" mnemonicParsing="false" onAction="#playClicked" prefHeight="80.0" prefWidth="252.0" stylesheets="@../css/buttons.css" text="Play">
                <VBox.margin>
                   <Insets bottom="8.0" />
                </VBox.margin></Button>
-            <Button fx:id="online" mnemonicParsing="false" onAction="#onlineClicked" prefHeight="60.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Online Mode">
+            <Button fx:id="online" mnemonicParsing="false" onAction="#onlineClicked" prefHeight="86.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Online Mode">
                <VBox.margin>
                   <Insets bottom="8.0" />
                </VBox.margin></Button>
-            <Button fx:id="settings" mnemonicParsing="false" onAction="#settingsClicked" prefHeight="60.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Settings">
+            <Button fx:id="settings" mnemonicParsing="false" onAction="#settingsClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Settings">
                <VBox.margin>
                   <Insets bottom="8.0" />
                </VBox.margin></Button>
-            <Button fx:id="highscores" mnemonicParsing="false" onAction="#highScoresClicked" prefHeight="60.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="High Scores">
-               <VBox.margin>
-                  <Insets bottom="8.0" />
-               </VBox.margin></Button>
-            <Button fx:id="exit" mnemonicParsing="false" onAction="#exitClicked" prefHeight="60.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Exit" />
+            <Button fx:id="exit" mnemonicParsing="false" onAction="#exitClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Exit" />
          </children>
       </VBox>
    </children>
