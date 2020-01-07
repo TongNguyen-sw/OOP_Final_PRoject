@@ -283,7 +283,7 @@
                         <Circle fx:id="r11" fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
                 </StackPane>
-                <StackPane layoutX="363.0" layoutY="666.0" prefHeight="50.0" prefWidth="50.0">
+                <StackPane layoutX="355.0" layoutY="666.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fx:id="r0" fill="WHITE" radius="23.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" />
                     </children>
