@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/GamePlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GameMode.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/PlayTurn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/PlayTurn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/PlayTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/PlayTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/GameMode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578469507260</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="editing on UI- GamePlay, GameMode, MainMenu, PlayTurn">
+      <created>1578474489025</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578474489025</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +122,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Play Turn sketch" />
     <MESSAGE value="Play Turn draft 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Play Turn draft 1" />
+    <MESSAGE value="editing on UI- GamePlay, GameMode, MainMenu, PlayTurn" />
+    <option name="LAST_COMMIT_MESSAGE" value="editing on UI- GamePlay, GameMode, MainMenu, PlayTurn" />
   </component>
 </project>
