@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class PlayTurn {
     private String[] player = {"Yellow" , "Green", "Blue", "Red"};
-    private String[] playerResult = {};
+    private String[] playerResult = new String[4];
     private int i = 0;
 
     @FXML
@@ -87,16 +87,46 @@ public class PlayTurn {
         diceStringResult += (char)(diceResult+48);
 
         if (i == 0){
-            //playerResult[i] = diceStringResult;
+            playerResult[i] = diceStringResult;
             yellowResult.setText(diceStringResult);
+            i++;
         } else if (i == 1){
-            greenResult.setText(diceStringResult);
+            for (int j = 0; j < i; j++) {
+                if (diceStringResult.equals(playerResult[j])){
+                    break;
+                } else {
+                    if (j == i- 1){
+                        playerResult[i] = diceStringResult;
+                        greenResult.setText(diceStringResult);
+                        i++;
+                    }
+                }
+            }
         } else if (i == 2){
-            blueResult.setText(diceStringResult);
+            for (int j = 0; j < i; j++) {
+                if (diceStringResult.equals(playerResult[j])){
+                    break;
+                } else {
+                    if (j == i- 1){
+                        playerResult[i] = diceStringResult;
+                        blueResult.setText(diceStringResult);
+                        i++;
+                    }
+                }
+            }
         } else if (i == 3){
-            redResult.setText(diceStringResult);
+            for (int j = 0; j < i; j++) {
+                if (diceStringResult.equals(playerResult[j])){
+                    break;
+                } else {
+                    if (j == i- 1){
+                        playerResult[i] = diceStringResult;
+                        redResult.setText(diceStringResult);
+                        i++;
+                    }
+                }
+            }
         }
-        i++;
     }
 
     @FXML
@@ -107,10 +137,10 @@ public class PlayTurn {
         redNameText.setText(redName.getText());
     }
 
-    int diceResult;
-    RollDices dice1 = new RollDices();
+    private int diceResult;
+    private RollDices dice1 = new RollDices();
 
-    public void rotatedDice1(){
+    private void rotatedDice1(){
         RotateTransition rt = new RotateTransition(javafx.util.Duration.seconds(0.5),dice);
         rt.setFromAngle(0);
         rt.setToAngle(360);
