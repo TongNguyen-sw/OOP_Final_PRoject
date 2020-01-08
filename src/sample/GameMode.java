@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -15,6 +16,8 @@ public class GameMode {
 
     @FXML
     Button returnButton;
+    @FXML
+    CheckBox checkBox1, checkBox2, checkBox3, checkBox4, checkBox5;
     @FXML
     private void backButtonClicked() throws IOException {
 
@@ -29,4 +32,74 @@ public class GameMode {
         Stage stage = (Stage) returnButton.getScene().getWindow();
         stage.setScene(new Scene(root, 970, 720));
     }
+
+    public void checkBox1Clicked(){
+         if (checkBox1.isSelected()){
+            checkBox2.setDisable(true);
+            checkBox3.setDisable(true);
+            checkBox4.setDisable(true);
+            checkBox5.setDisable(true);
+         }else if (!checkBox1.isSelected()){
+             checkBox2.setDisable(false);
+             checkBox3.setDisable(false);
+             checkBox4.setDisable(false);
+             checkBox5.setDisable(false);
+         }
+    }
+    public void checkBox2Clicked(){
+        if (checkBox2.isSelected()){
+            checkBox1.setDisable(true);
+            checkBox3.setDisable(true);
+            checkBox4.setDisable(true);
+            checkBox5.setDisable(true);
+        }else if (!checkBox2.isSelected()){
+            checkBox1.setDisable(false);
+            checkBox3.setDisable(false);
+            checkBox4.setDisable(false);
+            checkBox5.setDisable(false);
+        }
+    }
+
+    public void checkBox3Clicked(){
+        if (checkBox3.isSelected()){
+            checkBox1.setDisable(true);
+            checkBox2.setDisable(true);
+            checkBox4.setDisable(true);
+            checkBox5.setDisable(true);
+        }else if (!checkBox3.isSelected()){
+            checkBox1.setDisable(false);
+            checkBox2.setDisable(false);
+            checkBox4.setDisable(false);
+            checkBox5.setDisable(false);
+        }
+    }
+
+    public void checkBox4Clicked(){
+        if (checkBox4.isSelected()){
+            checkBox1.setDisable(true);
+            checkBox3.setDisable(true);
+            checkBox2.setDisable(true);
+            checkBox5.setDisable(true);
+        }else if (!checkBox4.isSelected()){
+            checkBox1.setDisable(false);
+            checkBox3.setDisable(false);
+            checkBox2.setDisable(false);
+            checkBox5.setDisable(false);
+        }
+    }
+
+    public void checkBox5Clicked(){
+        if (checkBox5.isSelected()){
+            checkBox1.setDisable(true);
+            checkBox3.setDisable(true);
+            checkBox4.setDisable(true);
+            checkBox2.setDisable(true);
+        }else if (!checkBox5.isSelected()){
+            checkBox1.setDisable(false);
+            checkBox3.setDisable(false);
+            checkBox4.setDisable(false);
+            checkBox2.setDisable(false);
+        }
+    }
+
 }
