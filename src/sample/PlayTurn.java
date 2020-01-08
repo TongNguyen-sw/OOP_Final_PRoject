@@ -66,6 +66,9 @@ public class PlayTurn {
     private Text redNameText;
 
     @FXML
+    private Text rollDiceAgainNoti;
+
+    @FXML
     private Button setAllName;
 
     @FXML
@@ -80,8 +83,13 @@ public class PlayTurn {
 
     @FXML
     void rollDiceClicked(ActionEvent event) {
-        rotatedDice1();
-        playerText.setText("Player " + player[i]);
+
+
+        if(i < 4){
+            rotatedDice1();
+            playerText.setText("Player " + player[i]);
+
+        }
 
         String diceStringResult = "";
         diceStringResult += (char)(diceResult+48);
@@ -93,9 +101,11 @@ public class PlayTurn {
         } else if (i == 1){
             for (int j = 0; j < i; j++) {
                 if (diceStringResult.equals(playerResult[j])){
+                    //rollDiceAgainNoti.setText("Roll Dice Again");
                     break;
                 } else {
                     if (j == i- 1){
+                        rollDiceAgainNoti.setText(" ");
                         playerResult[i] = diceStringResult;
                         greenResult.setText(diceStringResult);
                         i++;
@@ -105,9 +115,11 @@ public class PlayTurn {
         } else if (i == 2){
             for (int j = 0; j < i; j++) {
                 if (diceStringResult.equals(playerResult[j])){
+                    //rollDiceAgainNoti.setText("Roll Dice Again");
                     break;
                 } else {
                     if (j == i- 1){
+                        rollDiceAgainNoti.setText(" ");
                         playerResult[i] = diceStringResult;
                         blueResult.setText(diceStringResult);
                         i++;
@@ -117,9 +129,11 @@ public class PlayTurn {
         } else if (i == 3){
             for (int j = 0; j < i; j++) {
                 if (diceStringResult.equals(playerResult[j])){
+                    //rollDiceAgainNoti.setText("Roll Dice Again");
                     break;
                 } else {
                     if (j == i- 1){
+                        rollDiceAgainNoti.setText(" ");
                         playerResult[i] = diceStringResult;
                         redResult.setText(diceStringResult);
                         i++;

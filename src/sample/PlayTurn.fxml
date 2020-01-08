@@ -20,11 +20,13 @@
     <children>
         <HBox alignment="CENTER_LEFT" layoutX="109.0" layoutY="167.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <GridPane prefHeight="600.0" prefWidth="600.0">
+                <GridPane prefHeight="720.0" prefWidth="685.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="45.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="188.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="197.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="203.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="51.0" />
                     </columnConstraints>
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -32,7 +34,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
                             <image>
                                 <Image url="@../Image/square.jpg" />
                             </image>
@@ -40,7 +42,7 @@
                                 <InnerShadow choke="1.0" color="#fffb00" />
                             </effect>
                         </ImageView>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                             <image>
                                 <Image url="@../Image/square.jpg" />
                             </image>
@@ -48,7 +50,7 @@
                                 <InnerShadow choke="1.0" color="#007bff" />
                             </effect>
                         </ImageView>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
                             <image>
                                 <Image url="@../Image/square.jpg" />
                             </image>
@@ -56,7 +58,7 @@
                                 <InnerShadow choke="1.0" color="#08ff00" />
                             </effect>
                         </ImageView>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                             <image>
                                 <Image url="@../Image/square.jpg" />
                             </image>
@@ -64,9 +66,9 @@
                                 <InnerShadow choke="1.0" color="RED" />
                             </effect>
                         </ImageView>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                             <children>
-                                <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="86.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="73.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../Image/horse.png" />
                                     </image>
@@ -74,11 +76,11 @@
                                         <DropShadow color="#fffb00" spread="0.6" />
                                     </effect>
                                 </ImageView>
-                                <TextField fx:id="yellowName" layoutX="60.0" layoutY="61.0" prefHeight="21.0" prefWidth="132.0" />
+                                <TextField fx:id="yellowName" layoutX="47.0" layoutY="60.0" prefHeight="21.0" prefWidth="132.0" />
                                 <Text fx:id="yellowNameText" layoutX="79.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="93.4501953125" />
                             </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                             <children>
                                 <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="35.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -92,9 +94,9 @@
                                 <Text fx:id="greenNameText" layoutX="32.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="87.0" />
                             </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                             <children>
-                                <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="82.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="68.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../Image/horse.png" />
                                     </image>
@@ -102,11 +104,11 @@
                                         <DropShadow color="#007bff" spread="0.6" />
                                     </effect>
                                 </ImageView>
-                                <TextField fx:id="blueName" layoutX="56.0" layoutY="152.0" prefHeight="21.0" prefWidth="132.0" />
+                                <TextField fx:id="blueName" layoutX="42.0" layoutY="152.0" prefHeight="21.0" prefWidth="132.0" />
                                 <Text fx:id="blueNameText" layoutX="79.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="87.0" />
                             </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="35.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -120,7 +122,7 @@
                                 <Text fx:id="redNameText" layoutX="35.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="93.4501953125" />
                             </children>
                         </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                             <children>
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0e0d1" height="60.0" layoutX="25.0" layoutY="126.0" stroke="#f0e0d1" strokeType="INSIDE" width="150.0" />
                                 <Text fx:id="playerText" fill="#4d4641" layoutX="68.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="player" wrappingWidth="64.2855224609375">
@@ -137,78 +139,83 @@
                                     </effect>
                                 </ImageView>
                                 <ImageView fx:id="dice" fitHeight="76.0" fitWidth="76.0" layoutX="62.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="rollDiceAgainNoti" layoutX="54.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="109.5830078125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
                             </children>
                         </AnchorPane>
                     </children>
                 </GridPane>
-                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F0E0D1#F0E0D1;">
+                <AnchorPane prefHeight="720.0" prefWidth="289.0" style="-fx-background-color: #F0E0D1#F0E0D1;">
                     <children>
-                        <Button fx:id="rollDice" layoutX="40.0" layoutY="426.0" mnemonicParsing="false" onAction="#rollDiceClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Roll Dice">
+                        <Button fx:id="rollDice" layoutX="84.0" layoutY="426.0" mnemonicParsing="false" onAction="#rollDiceClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Roll Dice">
                             <font>
                                 <Font size="25.0" />
                             </font>
                         </Button>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="220.0" layoutX="7.0" layoutY="90.0" stroke="WHITE" strokeType="INSIDE" width="185.0" />
-                        <Line endX="92.0" layoutX="100.0" layoutY="134.0" startX="-92.0" />
-                        <Line endX="92.0" layoutX="100.0" layoutY="178.0" startX="-92.0" />
-                        <Line endX="93.0" layoutX="100.0" layoutY="222.0" startX="-92.0" />
-                        <Line endX="93.0" layoutX="100.0" layoutY="266.0" startX="-92.0" />
-                        <Line endX="59.5" endY="155.0" layoutX="40.0" layoutY="155.0" startX="59.5" startY="-65.0" />
-                        <Text layoutX="31.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="220.0" layoutX="51.0" layoutY="90.0" stroke="WHITE" strokeType="INSIDE" width="185.0" />
+                        <Line endX="92.0" layoutX="143.0" layoutY="135.0" startX="-92.0" />
+                        <Line endX="92.0" layoutX="143.0" layoutY="178.0" startX="-92.0" />
+                        <Line endX="93.0" layoutX="142.0" layoutY="222.0" startX="-92.0" />
+                        <Line endX="93.0" layoutX="142.0" layoutY="266.0" startX="-92.0" />
+                        <Line endX="59.5" endY="155.0" layoutX="83.0" layoutY="155.0" startX="59.5" startY="-65.0" />
+                        <Text layoutX="66.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player">
                             <font>
                                 <Font size="15.0" />
                             </font></Text>
-                        <Text layoutX="31.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yellow">
+                        <Text layoutX="66.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yellow">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text layoutX="31.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Green">
+                        <Text layoutX="66.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Green">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text layoutX="31.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue">
+                        <Text layoutX="66.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text layoutX="31.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Red">
+                        <Text layoutX="66.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Red">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text layoutX="121.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
+                        <Text layoutX="162.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text fx:id="yellowResult" layoutX="121.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
+                        <Text fx:id="yellowResult" layoutX="162.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text fx:id="greenResult" layoutX="121.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
+                        <Text fx:id="greenResult" layoutX="162.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text fx:id="blueResult" layoutX="121.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
+                        <Text fx:id="blueResult" layoutX="162.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text fx:id="redResult" layoutX="121.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
+                        <Text fx:id="redResult" layoutX="162.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Button fx:id="setAllName" layoutX="42.0" layoutY="350.0" mnemonicParsing="false" onAction="#setNameClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Set names">
+                        <Button fx:id="setAllName" layoutX="82.0" layoutY="348.0" mnemonicParsing="false" onAction="#setNameClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Set names">
                             <font>
                                 <Font size="10.0" />
                             </font>
                         </Button>
-                  <Button fx:id="PlayButton" layoutX="41.0" layoutY="506.0" mnemonicParsing="false" onAction="#PlayButtonClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Play" />
+                  <Button fx:id="PlayButton" layoutX="84.0" layoutY="507.0" mnemonicParsing="false" onAction="#PlayButtonClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Play" />
                     </children>
                 </AnchorPane>
             </children>
