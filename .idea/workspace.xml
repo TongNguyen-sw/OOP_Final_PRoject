@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/GameMode.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/MainMenu.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578474489025</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="editing on UI- GamePlay, GameMode, MainMenu, PlayTurn">
+      <created>1578474709714</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578474709714</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
