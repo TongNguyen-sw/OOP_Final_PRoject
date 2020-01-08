@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class PlayTurn {
     private String[] player = {"Yellow" , "Green", "Blue", "Red"};
-    private String[] playerResult = new String[4];
+    public String[] playerResult = new String[4];
     private int i = 0;
 
     @FXML
@@ -64,6 +64,18 @@ public class PlayTurn {
 
     @FXML
     private Text redNameText;
+
+    @FXML
+    private Text yellowChart;
+
+    @FXML
+    private Text greenChart;
+
+    @FXML
+    private Text blueChart;
+
+    @FXML
+    private Text redChart;
 
     @FXML
     private Text rollDiceAgainNoti;
@@ -146,13 +158,25 @@ public class PlayTurn {
     @FXML
     void setNameClicked(ActionEvent event){
         yellowNameText.setText(yellowName.getText());
+        if (yellowName.getText().equals("")){ yellowChart.setText("Player 1");  }
+            else { yellowChart.setText(yellowName.getText()); }
         greenNameText.setText(greenName.getText());
+        if (greenName.getText().equals("")){ greenChart.setText("Player 2");  }
+         else { greenChart.setText(greenName.getText());  }
         blueNameText.setText(blueName.getText());
+        if (blueName.getText().equals("")) {blueChart.setText("Player 3"); }
+         else { blueChart.setText(blueName.getText());  }
         redNameText.setText(redName.getText());
+        if (redName.getText().equals("")){ redChart.setText("Player 4"); }
+            else { redChart.setText(redName.getText());  }
     }
 
     private int diceResult;
     private RollDices dice1 = new RollDices();
+
+    public void initialize(){
+        dice.setImage(new Image("file:src/Image/" + dice1.Rolldice() + ".png"));
+    }
 
     private void rotatedDice1(){
         RotateTransition rt = new RotateTransition(javafx.util.Duration.seconds(0.5),dice);

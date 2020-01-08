@@ -77,7 +77,7 @@
                                     </effect>
                                 </ImageView>
                                 <TextField fx:id="yellowName" layoutX="47.0" layoutY="60.0" prefHeight="21.0" prefWidth="132.0" />
-                                <Text fx:id="yellowNameText" layoutX="79.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="93.4501953125" />
+                                <Text fx:id="yellowNameText" layoutX="73.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="93.4501953125" />
                             </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
@@ -165,22 +165,22 @@
                             <font>
                                 <Font size="15.0" />
                             </font></Text>
-                        <Text layoutX="66.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yellow">
+                        <Text fx:id="yellowChart" layoutX="66.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yellow">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text layoutX="66.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Green">
+                        <Text fx:id="greenChart" layoutX="66.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Green">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text layoutX="66.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue">
+                        <Text fx:id="blueChart" layoutX="66.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blue">
                             <font>
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Text layoutX="66.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Red">
+                        <Text fx:id="redChart" layoutX="66.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Red">
                             <font>
                                 <Font size="15.0" />
                             </font>
