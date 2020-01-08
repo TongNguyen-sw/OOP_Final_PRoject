@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
+import javafx.scene.effect.BoxBlur;
+import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -38,15 +40,74 @@ public class GamePlay {
     ImageView value2;
     @FXML
     SplitPane gamePlay;
-
+    @FXML
+    Button chooseBoth;
 
     RollDices d1 = new RollDices();
     RollDices d2 = new RollDices();
     Sound sound = new Sound();
+    private int finalValue;
+    private boolean chooseValue1 = true;
+    private boolean chooseValue2 = true;
+    private boolean chooseBothValue = true;
 
     public void initialize(){
         dice1.setImage(new Image("file:src/Image/" + d1.Rolldice() + ".png"));
         dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
+        chooseBoth.setDisable(true);
+    }
+
+
+    public void getValueDice1(){
+        if (chooseValue1){
+            BoxBlur boxblur = new BoxBlur();
+            value1.setEffect(boxblur);
+            finalValue += d1.getValue();
+            chooseValue1 = false;
+            System.out.println(finalValue);
+        } else {
+            ColorAdjust colorAdjust = new ColorAdjust();
+            value1.setEffect(colorAdjust);
+            finalValue -= d1.getValue();
+            chooseValue1 = true;
+        }
+    }
+
+    public void getValueDice2(){
+        if (chooseValue2){
+            BoxBlur boxblur = new BoxBlur();
+            value2.setEffect(boxblur);
+            finalValue += d2.getValue();
+            System.out.println(finalValue);
+            chooseValue2 = false;
+        } else {
+            ColorAdjust colorAdjust = new ColorAdjust();
+            value2.setEffect(colorAdjust);
+            finalValue -= d2.getValue();
+            chooseValue2 = true;
+        }
+    }
+
+    public void getBothValue(){
+        if (chooseBothValue){
+            finalValue = 0;
+            chooseValue1 = false;
+            chooseValue2 = false;
+            BoxBlur boxblur = new BoxBlur();
+            value2.setEffect(boxblur);
+            value1.setEffect(boxblur);
+            finalValue = d1.getValue() + d2.getValue();
+            System.out.println(finalValue);
+            chooseBothValue = false;
+        }else {
+            finalValue = 0;
+            ColorAdjust colorAdjust = new ColorAdjust();
+            value2.setEffect(colorAdjust);
+            value1.setEffect(colorAdjust);
+            chooseBothValue=true;
+            chooseValue1 = true;
+            chooseValue2 = true;
+        }
     }
 
     public void rotatedDice1() {
@@ -73,6 +134,8 @@ public class GamePlay {
     }
 
     public void clickedRoll(ActionEvent event){
+        finalValue = 0;
+        chooseBoth.setDisable(false);
         sound.playDiceSound();
         rotatedDice1();
         rotatedDice2();

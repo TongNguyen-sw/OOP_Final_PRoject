@@ -1,64 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<SplitPane fx:id="gamePlay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GamePlay">
+<SplitPane fx:id="gamePlay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GamePlay">
     <items>
         <AnchorPane prefHeight="720.0" prefWidth="970.0">
             <children>
                 <StackPane prefHeight="250.0" prefWidth="250.0">
-               <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
-                        <Circle fill="WHITE" layoutX="125.0" layoutY="125.0" radius="109.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="5.0" />
-                        <ImageView fx:id="yh0" fitHeight="43.0" fitWidth="44.0" layoutX="60.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="yh1" fitHeight="43.0" fitWidth="44.0" layoutX="142.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="yh3" fitHeight="43.0" fitWidth="44.0" layoutX="142.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="yh2" fitHeight="43.0" fitWidth="44.0" layoutX="60.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <Label layoutX="10.0" layoutY="8.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
-                        <Label layoutX="81.0" layoutY="39.0" prefHeight="17.0" prefWidth="61.0" text="Label" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </StackPane>
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
+                                <Circle fill="WHITE" layoutX="125.0" layoutY="125.0" radius="109.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="5.0" />
+                                <ImageView fx:id="yh0" fitHeight="43.0" fitWidth="44.0" layoutX="60.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="yh1" fitHeight="43.0" fitWidth="44.0" layoutX="142.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="yh3" fitHeight="43.0" fitWidth="44.0" layoutX="142.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="yh2" fitHeight="43.0" fitWidth="44.0" layoutX="60.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <Label layoutX="10.0" layoutY="8.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                                <Label layoutX="81.0" layoutY="39.0" prefHeight="17.0" prefWidth="61.0" text="Label" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </StackPane>
                 <StackPane fx:id="c1" layoutX="250.0" prefHeight="50.0" prefWidth="50.0">
                     <children>
                         <Circle fill="WHITE" radius="23.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="4.0" />
@@ -304,12 +299,12 @@
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="137.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="180.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="223.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                        <Label layoutX="54.0" layoutY="211.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="1" />
-                        <Label layoutX="54.0" layoutY="168.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="2" />
-                        <Label layoutX="54.0" layoutY="125.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="3" />
-                        <Label layoutX="54.0" layoutY="82.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="4" />
-                        <Label layoutX="54.0" layoutY="39.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="5" />
-                        <Label layoutX="54.0" layoutY="-4.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="6" />
+                                <Label layoutX="54.0" layoutY="211.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="1" />
+                                <Label layoutX="54.0" layoutY="168.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="2" />
+                                <Label layoutX="54.0" layoutY="125.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="3" />
+                                <Label layoutX="54.0" layoutY="82.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="4" />
+                                <Label layoutX="54.0" layoutY="39.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="5" />
+                                <Label layoutX="54.0" layoutY="-4.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="6" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -324,12 +319,12 @@
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="137.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="181.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="225.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="45.0" />
-                        <Label layoutX="12.0" layoutY="25.0" prefHeight="72.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="6" />
-                        <Label layoutX="56.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="5" />
-                        <Label layoutX="232.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="1" />
-                        <Label layoutX="188.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="2" />
-                        <Label layoutX="144.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="3" />
-                        <Label layoutX="100.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="4" />
+                                <Label layoutX="12.0" layoutY="25.0" prefHeight="72.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="6" />
+                                <Label layoutX="56.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="5" />
+                                <Label layoutX="232.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="1" />
+                                <Label layoutX="188.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="2" />
+                                <Label layoutX="144.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="3" />
+                                <Label layoutX="100.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="4" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -344,12 +339,12 @@
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="132.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="176.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="220.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                        <Label layoutX="227.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="6" />
-                        <Label layoutX="183.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="5" />
-                        <Label layoutX="139.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="4" />
-                        <Label layoutX="95.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="3" />
-                        <Label layoutX="51.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="2" />
-                        <Label layoutX="7.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="1" />
+                                <Label layoutX="227.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="6" />
+                                <Label layoutX="183.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="5" />
+                                <Label layoutX="139.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="4" />
+                                <Label layoutX="95.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="3" />
+                                <Label layoutX="51.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="2" />
+                                <Label layoutX="7.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="1" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -364,12 +359,12 @@
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="137.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="180.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="223.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                        <Label layoutX="57.0" layoutY="-4.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="1" />
-                        <Label layoutX="57.0" layoutY="39.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="2" />
-                        <Label layoutX="57.0" layoutY="82.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="3" />
-                        <Label layoutX="57.0" layoutY="125.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="4" />
-                        <Label layoutX="57.0" layoutY="168.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="5" />
-                        <Label layoutX="57.0" layoutY="211.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="6" />
+                                <Label layoutX="57.0" layoutY="-4.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="1" />
+                                <Label layoutX="57.0" layoutY="39.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="2" />
+                                <Label layoutX="57.0" layoutY="82.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="3" />
+                                <Label layoutX="57.0" layoutY="125.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="4" />
+                                <Label layoutX="57.0" layoutY="168.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="5" />
+                                <Label layoutX="57.0" layoutY="211.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="6" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -381,143 +376,144 @@
                 </StackPane>
                 <ImageView fx:id="dice1" fitHeight="50.0" fitWidth="50.0" layoutX="338.0" layoutY="334.0" onDragDetected="#rotatedDice1" pickOnBounds="true" preserveRatio="true" />
                 <ImageView fx:id="dice2" fitHeight="50.0" fitWidth="50.0" layoutX="388.0" layoutY="334.0" onDragDetected="#rotatedDice2" pickOnBounds="true" preserveRatio="true" />
-            <StackPane layoutY="468.0" prefHeight="250.0" prefWidth="250.0">
-               <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
-                        <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" />
-                        <ImageView fx:id="bh3" fitHeight="43.0" fitWidth="44.0" layoutX="142.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="bh2" fitHeight="43.0" fitWidth="44.0" layoutX="61.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="bh0" fitHeight="43.0" fitWidth="44.0" layoutX="61.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="bh1" fitHeight="43.0" fitWidth="44.0" layoutX="142.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <Label layoutX="6.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </StackPane>
-            <StackPane layoutX="519.0" prefHeight="250.0" prefWidth="250.0">
-               <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
-                        <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="5.0" />
-                        <ImageView fx:id="gh0" fitHeight="43.0" fitWidth="44.0" layoutX="147.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="gh1" fitHeight="43.0" fitWidth="44.0" layoutX="57.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="gh3" fitHeight="43.0" fitWidth="44.0" layoutX="57.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="gh2" fitHeight="43.0" fitWidth="44.0" layoutX="147.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <Label layoutX="175.0" layoutY="6.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </StackPane>
-            <StackPane layoutX="519.0" layoutY="468.0" prefHeight="250.0" prefWidth="250.0">
-               <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="RED" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
-                        <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="RED" strokeType="INSIDE" strokeWidth="5.0" />
-                        <ImageView fx:id="rh2" fitHeight="43.0" fitWidth="44.0" layoutX="140.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="rh0" fitHeight="43.0" fitWidth="44.0" layoutX="68.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="rh1" fitHeight="43.0" fitWidth="44.0" layoutX="68.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <ImageView fx:id="rh3" fitHeight="43.0" fitWidth="44.0" layoutX="140.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Image/horse.png" />
-                           </image>
-                           <effect>
-                              <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
-                           </effect>
-                        </ImageView>
-                        <Label layoutX="176.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </StackPane>
-            <AnchorPane layoutX="775.0" prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #F0E0D1#F0E0D1 #F0E0D1#F0E0D1;">
-               <children>
-                      <Button fx:id="rolldice" layoutX="45.0" layoutY="131.0" mnemonicParsing="false" onAction="#clickedRoll" stylesheets="@../css/buttons.css" text="Roll Dices" />
-                      <Button fx:id="stop" layoutX="40.0" layoutY="654.0" mnemonicParsing="false" onAction="#stopClicked" stylesheets="@../css/buttons.css" text="Stop Game" />
-                      <ImageView fx:id="value2" fitHeight="80.0" fitWidth="80.0" layoutX="98.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
-                      <ImageView fx:id="value1" fitHeight="80.0" fitWidth="80.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
-               </children>
-            </AnchorPane>
+                <StackPane layoutY="468.0" prefHeight="250.0" prefWidth="250.0">
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
+                                <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" />
+                                <ImageView fx:id="bh3" fitHeight="43.0" fitWidth="44.0" layoutX="142.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="bh2" fitHeight="43.0" fitWidth="44.0" layoutX="61.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="bh0" fitHeight="43.0" fitWidth="44.0" layoutX="61.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="bh1" fitHeight="43.0" fitWidth="44.0" layoutX="142.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <Label layoutX="6.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </StackPane>
+                <StackPane layoutX="519.0" prefHeight="250.0" prefWidth="250.0">
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
+                                <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="5.0" />
+                                <ImageView fx:id="gh0" fitHeight="43.0" fitWidth="44.0" layoutX="147.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="gh1" fitHeight="43.0" fitWidth="44.0" layoutX="57.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="gh3" fitHeight="43.0" fitWidth="44.0" layoutX="57.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="gh2" fitHeight="43.0" fitWidth="44.0" layoutX="147.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <Label layoutX="175.0" layoutY="6.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </StackPane>
+                <StackPane layoutX="519.0" layoutY="468.0" prefHeight="250.0" prefWidth="250.0">
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="RED" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
+                                <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="RED" strokeType="INSIDE" strokeWidth="5.0" />
+                                <ImageView fx:id="rh2" fitHeight="43.0" fitWidth="44.0" layoutX="140.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="rh0" fitHeight="43.0" fitWidth="44.0" layoutX="68.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="rh1" fitHeight="43.0" fitWidth="44.0" layoutX="68.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <ImageView fx:id="rh3" fitHeight="43.0" fitWidth="44.0" layoutX="140.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Image/horse.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
+                                    </effect>
+                                </ImageView>
+                                <Label layoutX="176.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </StackPane>
+                <AnchorPane layoutX="775.0" prefHeight="720.0" prefWidth="195.0" style="-fx-background-color: #F0E0D1#F0E0D1 #F0E0D1#F0E0D1;">
+                    <children>
+                        <Button fx:id="rolldice" layoutX="40.0" layoutY="140.0" mnemonicParsing="false" onAction="#clickedRoll" stylesheets="@../css/buttons.css" text="Roll Dices" />
+                        <Button fx:id="stop" layoutX="40.0" layoutY="654.0" mnemonicParsing="false" onAction="#stopClicked" stylesheets="@../css/buttons.css" text="Stop Game" />
+                        <ImageView fx:id="value2" fitHeight="80.0" fitWidth="80.0" layoutX="98.0" layoutY="51.0" onMouseClicked="#getValueDice2" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="value1" fitHeight="80.0" fitWidth="80.0" layoutX="14.0" layoutY="51.0" onMouseClicked="#getValueDice1" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="chooseBoth" layoutX="29.0" layoutY="7.0" mnemonicParsing="false" onAction="#getBothValue" stylesheets="@../css/buttons.css" text="Choose Both" />
+                    </children>
+                </AnchorPane>
             </children>
         </AnchorPane>
     </items>
