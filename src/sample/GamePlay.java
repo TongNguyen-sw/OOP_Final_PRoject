@@ -43,6 +43,12 @@ public class GamePlay {
     RollDices d1 = new RollDices();
     RollDices d2 = new RollDices();
     Sound sound = new Sound();
+
+    public void initialize(){
+        dice1.setImage(new Image("file:src/Image/" + d1.Rolldice() + ".png"));
+        dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
+    }
+
     public void rotatedDice1() {
         RotateTransition rt = new RotateTransition(javafx.util.Duration.seconds(0.5), dice1);
         rt.setFromAngle(0);
@@ -70,11 +76,6 @@ public class GamePlay {
         sound.playDiceSound();
         rotatedDice1();
         rotatedDice2();
-    }
-
-    public void initialize(){
-        dice1.setImage(new Image("file:src/Image/" + d1.Rolldice() + ".png"));
-        dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
     }
 
     public void stopClicked(ActionEvent actionEvent) throws IOException {
@@ -109,10 +110,4 @@ public class GamePlay {
 
 }
 
-//    public void quitClicked(ActionEvent actionEvent) throws IOException {
-//        Parent root = FXMLLoader.load(getClass().getResource("../sample/MainMenu.fxml"));
-//        Stage stage = (Stage) quit.getScene().getWindow();
-//        stage.setScene(new Scene(root,800,600));
-//    }
-//}
 

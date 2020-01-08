@@ -22,7 +22,7 @@
                <VBox.margin>
                   <Insets bottom="8.0" />
                </VBox.margin></Button>
-            <Button fx:id="settings" mnemonicParsing="false" onAction="#settingsClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Settings">
+            <Button fx:id="language" mnemonicParsing="false" onAction="#languageClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Language">
                <VBox.margin>
                   <Insets bottom="8.0" />
                </VBox.margin></Button>

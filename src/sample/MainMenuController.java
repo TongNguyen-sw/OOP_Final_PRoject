@@ -32,8 +32,32 @@ public class MainMenuController {
     public void onlineClicked(ActionEvent actionEvent) {
     }
 
-    public void settingsClicked(ActionEvent actionEvent) {
+    public void languageClicked(ActionEvent actionEvent) throws IOException {
+        Stage primaryStage = (Stage) exit.getScene().getWindow();
+        GaussianBlur blur = new GaussianBlur(3);
+        mainMenu.setEffect(blur);
+        Parent root = FXMLLoader.load(getClass().getResource("LanguageSwitch.fxml"));
+        Stage dialog = new Stage();
+        Scene scene = new Scene(root,384.0,133.0);
+        scene.setFill(Color.TRANSPARENT);
+        dialog.setScene(scene);
+        dialog.initModality(Modality.WINDOW_MODAL);
+        dialog.initOwner(primaryStage);
+        dialog.initStyle(StageStyle.TRANSPARENT);
+        dialog.setResizable(false);
 
+        double centerXPosition = primaryStage.getX() + primaryStage.getWidth()/2d;
+        double centerYPosition = primaryStage.getY() + primaryStage.getHeight()/2d;
+
+        dialog.setOnShowing(event -> dialog.hide());
+
+        dialog.setOnShown(event -> {
+            dialog.setX(centerXPosition - dialog.getWidth()/2d);
+            dialog.setY(centerYPosition - dialog.getHeight()/2d);
+            dialog.show();
+        });
+
+        dialog.show();
     }
 
     public void exitClicked(ActionEvent actionEvent) throws IOException {

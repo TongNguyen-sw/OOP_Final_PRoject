@@ -17,9 +17,7 @@ public class GameMode {
     Button returnButton;
     @FXML
     private void backButtonClicked() throws IOException {
-//        mediaPlayer.seek(Duration.ZERO);
-//        mediaPlayer.setVolume(0.3f);
-//        mediaPlayer.play();
+
         Parent root = FXMLLoader.load(getClass().getResource("../sample/MainMenu.fxml"));
         Stage stage = (Stage) returnButton.getScene().getWindow();
         stage.getScene().setRoot(root);
