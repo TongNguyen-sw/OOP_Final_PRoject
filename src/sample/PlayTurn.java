@@ -19,6 +19,9 @@ public class PlayTurn {
     private String[] player = {"Yellow" , "Green", "Blue", "Red"};
     public String[] playerResult = new String[4];
     private int i = 0;
+    private int firstPlayer=0;
+    private int maxDiceValue=0;
+    private int numberPlayer=0;
 
     @FXML
     private Text playerText;
@@ -88,17 +91,68 @@ public class PlayTurn {
 
     @FXML
     void PlayButtonClicked(ActionEvent event) throws IOException {
+    	Main.currentStage.setUserData(setUserData());
         Parent root = FXMLLoader.load(getClass().getResource("../sample/GamePlay.fxml"));
         Stage stage = (Stage) PlayButton.getScene().getWindow();
         stage.setScene(new Scene(root, 970, 720));
     }
 
+    public static class UserData{
+    	String playerNames[];
+    	int firstPlayer;
+    	int numberPlayers;
+		public String[] getPlayerNames() {
+			return playerNames;
+		}
+		public void setPlayerNames(String[] playerNames) {
+			this.playerNames = playerNames;
+		}
+		public int getFirstPlayer() {
+			return firstPlayer;
+		}
+		public void setFirstPlayer(int firstPlayer) {
+			this.firstPlayer = firstPlayer;
+		}
+		public int getNumberPlayers() {
+			return numberPlayers;
+		}
+		public void setNumberPlayers(int numberPlayers) {
+			this.numberPlayers = numberPlayers;
+		}
+		public UserData(String[] playerNames, int firstPlayer, int numberPlayers) {
+			super();
+			this.playerNames = playerNames;
+			this.firstPlayer = firstPlayer;
+			this.numberPlayers = numberPlayers;
+		}
+		public UserData() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+		
+    }
+    
+    private UserData setUserData() {
+    	UserData userData=new UserData();
+    	String playerNames[]=new String[4];
+    	playerNames[0]=yellowChart.getText();
+    	playerNames[1]=greenChart.getText();
+    	playerNames[2]=blueChart.getText();
+    	playerNames[3]=redChart.getText();
+    	userData.setPlayerNames(playerNames);
+    	userData.setFirstPlayer(firstPlayer);
+    	userData.setNumberPlayers(numberPlayer);
+    	return userData;
+    }
+    
     @FXML
     void rollDiceClicked(ActionEvent event) {
-
-
         if(i < 4){
             rotatedDice1();
+            if(maxDiceValue<diceResult) {
+        		firstPlayer=i;
+        		maxDiceValue=diceResult;
+        	}
             playerText.setText("Player " + player[i]);
 
         }
@@ -176,6 +230,7 @@ public class PlayTurn {
 
     public void initialize(){
         dice.setImage(new Image("file:src/Image/" + dice1.Rolldice() + ".png"));
+        numberPlayer=(int)Main.currentStage.getUserData();
     }
 
     private void rotatedDice1(){

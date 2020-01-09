@@ -7,12 +7,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
@@ -20,28 +22,25 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import sample.PlayTurn.UserData;
 
 import java.io.File;
 import java.io.IOException;
 
 public class GamePlay {
 
-    @FXML
-    Button stop;
-    @FXML
-    ImageView dice1;
-    @FXML
-    ImageView dice2;
-    @FXML
-    Button rolldice;
-    @FXML
-    ImageView value1;
-    @FXML
-    ImageView value2;
-    @FXML
-    SplitPane gamePlay;
-    @FXML
-    Button chooseBoth;
+    @FXML Button stop;
+    @FXML ImageView dice1;
+    @FXML ImageView dice2;
+    @FXML Button rolldice;
+    @FXML ImageView value1;
+    @FXML ImageView value2;
+    @FXML SplitPane gamePlay;
+    @FXML Button chooseBoth;
+    @FXML private Label lb_currentplayername;
+    @FXML private ImageView yh0, yh1, yh2, yh3, gh0, gh1, gh2, gh3, bh0, bh1, bh2, bh3, rh0, rh1, rh2, rh3;
+    @FXML private StackPane c1, c2, c3, c4, c5, c6, c7, c8, c9;
+    @FXML Label lb_player1, lb_player2, lb_player3, lb_player4; 
 
     RollDices d1 = new RollDices();
     RollDices d2 = new RollDices();
@@ -50,15 +49,89 @@ public class GamePlay {
     private boolean chooseValue1 = true;
     private boolean chooseValue2 = true;
     private boolean chooseBothValue = true;
+    private Player[] players;
+    private int currentPlayer;
+    private UserData userData;
+    private int numberPlayers;
+    private String[] playerNames;
+    
 
     public void initialize(){
         dice1.setImage(new Image("file:src/Image/" + d1.Rolldice() + ".png"));
         dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
         chooseBoth.setDisable(true);
+        setUpPlayers();
+        setUpPlayerNames();
+        c1.getChildren().add(players[0].getHorses()[0].getImgHorse());
     }
 
 
-    public void getValueDice1(){
+    private void setUpPlayerNames() {
+		// TODO Auto-generated method stub
+    	lb_player1.setText(playerNames[0]);
+        lb_player2.setText(playerNames[1]);
+        lb_player3.setText(playerNames[2]);
+        lb_player4.setText(playerNames[3]);
+	}
+
+
+	private void setUpPlayers() {
+		// TODO Auto-generated method stub
+    	userData=(UserData) Main.currentStage.getUserData();
+    	numberPlayers=userData.getNumberPlayers();
+    	playerNames=userData.getPlayerNames();
+    	currentPlayer=userData.getFirstPlayer();
+    	lb_currentplayername.setText(playerNames[currentPlayer]);
+    	players =new Player[4];
+		for(int i=0;i<playerNames.length;i++) {
+			if(i<numberPlayers) {
+				players[i]=new Player(playerNames[i], true) {
+					@Override
+					public void rollDices() {
+						// TODO Auto-generated method stub
+						rotatedDice1();
+						rotatedDice2();
+						//waiting for player choose what way to go then handler that choice
+					}
+				};
+			}
+			else {
+				players[i]=new Player(playerNames[i], true) {
+					@Override
+					public void rollDices() {
+						// TODO Auto-generated method stub
+						rotatedDice1();
+						rotatedDice2();
+						//randomchoice and next player rolldice
+					}
+				};
+			}
+			switch (i) {
+			case 0:{
+				players[i].setHorseColor(yh0, yh1, yh2, yh3);
+				break;
+			}
+			case 1:{
+				players[i].setHorseColor(gh0, gh1, gh2, gh3);
+				break;
+			}
+			case 2:{
+				players[i].setHorseColor(bh0, bh1, bh2, bh3);
+				break;
+			}
+			case 3:{
+				players[i].setHorseColor(rh0, rh1, rh2, rh3);
+				break;
+			}
+
+			default:
+				break;
+			}
+		}
+	}
+
+
+	public void getValueDice1(){
         if (chooseValue1){
             BoxBlur boxblur = new BoxBlur();
             value1.setEffect(boxblur);
@@ -137,8 +210,11 @@ public class GamePlay {
         finalValue = 0;
         chooseBoth.setDisable(false);
         sound.playDiceSound();
-        rotatedDice1();
-        rotatedDice2();
+        players[currentPlayer].rollDices();
+        currentPlayer++;
+        if(currentPlayer>3)
+        	currentPlayer=0;
+        lb_currentplayername.setText(playerNames[currentPlayer]);
     }
 
     public void stopClicked(ActionEvent actionEvent) throws IOException {

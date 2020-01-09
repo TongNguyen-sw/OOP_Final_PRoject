@@ -18,16 +18,19 @@ public class GameMode {
     Button returnButton;
     @FXML
     CheckBox checkBox1, checkBox2, checkBox3, checkBox4, checkBox5;
+    
+    private int numberPlayers=0;
+    
     @FXML
     private void backButtonClicked() throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("../sample/MainMenu.fxml"));
         Stage stage = (Stage) returnButton.getScene().getWindow();
         stage.getScene().setRoot(root);
-
     }
 
     public void startGameClicked(ActionEvent actionEvent) throws IOException {
+    	Main.currentStage.setUserData(numberPlayers);
         Parent root = FXMLLoader.load(getClass().getResource("../sample/PlayTurn.fxml"));
         Stage stage = (Stage) returnButton.getScene().getWindow();
         stage.setScene(new Scene(root, 970, 720));
@@ -35,6 +38,7 @@ public class GameMode {
 
     public void checkBox1Clicked(){
          if (checkBox1.isSelected()){
+        	numberPlayers=0;
             checkBox2.setDisable(true);
             checkBox3.setDisable(true);
             checkBox4.setDisable(true);
@@ -48,6 +52,7 @@ public class GameMode {
     }
     public void checkBox2Clicked(){
         if (checkBox2.isSelected()){
+        	numberPlayers=1;
             checkBox1.setDisable(true);
             checkBox3.setDisable(true);
             checkBox4.setDisable(true);
@@ -62,6 +67,7 @@ public class GameMode {
 
     public void checkBox3Clicked(){
         if (checkBox3.isSelected()){
+        	numberPlayers=2;
             checkBox1.setDisable(true);
             checkBox2.setDisable(true);
             checkBox4.setDisable(true);
@@ -76,6 +82,7 @@ public class GameMode {
 
     public void checkBox4Clicked(){
         if (checkBox4.isSelected()){
+        	numberPlayers=3;
             checkBox1.setDisable(true);
             checkBox3.setDisable(true);
             checkBox2.setDisable(true);
@@ -90,6 +97,7 @@ public class GameMode {
 
     public void checkBox5Clicked(){
         if (checkBox5.isSelected()){
+        	numberPlayers=4;
             checkBox1.setDisable(true);
             checkBox3.setDisable(true);
             checkBox4.setDisable(true);
