@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<SplitPane fx:id="gamePlay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GamePlay">
+<SplitPane fx:id="gamePlay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GamePlay">
     <items>
         <AnchorPane prefHeight="720.0" prefWidth="970.0">
             <children>
@@ -49,7 +51,7 @@
                                     </effect>
                                 </ImageView>
                                 <Label layoutX="10.0" layoutY="8.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
-                                <Label layoutX="81.0" layoutY="39.0" prefHeight="17.0" prefWidth="61.0" text="Label" />
+                                <Label fx:id="lb_player1" alignment="CENTER" layoutX="95.0" layoutY="32.0" prefHeight="17.0" prefWidth="61.0" text="Label" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -415,6 +417,7 @@
                                     </effect>
                                 </ImageView>
                                 <Label layoutX="6.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                        <Label fx:id="lb_player3" alignment="CENTER" layoutX="111.0" layoutY="37.0" text="Label" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -458,6 +461,7 @@
                                     </effect>
                                 </ImageView>
                                 <Label layoutX="175.0" layoutY="6.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                        <Label fx:id="lb_player2" alignment="CENTER" layoutX="111.0" layoutY="31.0" text="Label" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -501,6 +505,7 @@
                                     </effect>
                                 </ImageView>
                                 <Label layoutX="176.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                        <Label fx:id="lb_player4" layoutX="111.0" layoutY="37.0" text="Label" />
                             </children>
                         </AnchorPane>
                     </children>
@@ -512,6 +517,14 @@
                         <ImageView fx:id="value2" fitHeight="80.0" fitWidth="80.0" layoutX="98.0" layoutY="51.0" onMouseClicked="#getValueDice2" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fx:id="value1" fitHeight="80.0" fitWidth="80.0" layoutX="14.0" layoutY="51.0" onMouseClicked="#getValueDice1" pickOnBounds="true" preserveRatio="true" />
                         <Button fx:id="chooseBoth" layoutX="29.0" layoutY="7.0" mnemonicParsing="false" onAction="#getBothValue" stylesheets="@../css/buttons.css" text="Choose Both" />
+                  <Label layoutX="59.0" layoutY="185.0" text="CurrentPlayer: " AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="lb_currentplayername" layoutX="64.0" layoutY="186.0" text="CurrentPlayerName" textFill="#4c7220" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
                     </children>
                 </AnchorPane>
             </children>
