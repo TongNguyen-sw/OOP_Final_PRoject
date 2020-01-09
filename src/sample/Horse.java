@@ -8,26 +8,28 @@ public class Horse {
 	private ImageView imgHorse;
 	private int position;
 	private boolean isOnHouse;
+	private boolean isFinished;
 	
 	public Horse(ImageView imgHorse, int position, boolean isOnHouse) {
 		super();
 		this.imgHorse = imgHorse;
 		this.position = position;
 		this.isOnHouse = isOnHouse;
+		this.isFinished=false;
 	}
 	
 	public Horse( int position, boolean isOnHouse) {
 		super();
 		this.position = position;
 		this.isOnHouse = isOnHouse;
+		this.isFinished=false;
 	}
-	
+
 	public Horse() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
-	public void go(int position, int []array, StackPane []stackPane) {
+	public void go(int to, Horse []arrayHorse, StackPane []stackPane) {
 		if(this.position!=0)
 			stackPane[this.position].getChildren().remove(this.imgHorse);
 	}
@@ -49,6 +51,16 @@ public class Horse {
 	}
 	public void setOnHouse(boolean isOnHouse) {
 		this.isOnHouse = isOnHouse;
+	}
+	public boolean isFinished() {
+		return isFinished;
+	}
+	public void setFinished(boolean isFinished) {
+		this.isFinished = isFinished;
+	}
+	
+	public void increasePosition() {
+		this.position++;
 	}
 	
 }
