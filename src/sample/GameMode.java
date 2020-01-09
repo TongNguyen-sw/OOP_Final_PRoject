@@ -18,9 +18,11 @@ public class GameMode {
     Button returnButton;
     @FXML
     CheckBox checkBox1, checkBox2, checkBox3, checkBox4, checkBox5;
-    
-    private int numberPlayers=0;
-    
+    @FXML
+    Button startGame;
+
+    private int numberPlayers = 0;
+
     @FXML
     private void backButtonClicked() throws IOException {
 
@@ -30,34 +32,43 @@ public class GameMode {
     }
 
     public void startGameClicked(ActionEvent actionEvent) throws IOException {
-    	Main.currentStage.setUserData(numberPlayers);
+        Main.currentStage.setUserData(numberPlayers);
         Parent root = FXMLLoader.load(getClass().getResource("../sample/PlayTurn.fxml"));
         Stage stage = (Stage) returnButton.getScene().getWindow();
         stage.setScene(new Scene(root, 970, 720));
     }
 
-    public void checkBox1Clicked(){
-         if (checkBox1.isSelected()){
-        	numberPlayers=0;
+    public void initialize() {
+        startGame.setDisable(true);
+    }
+
+    public void checkBox1Clicked() {
+        if (checkBox1.isSelected()) {
+            numberPlayers = 0;
+            startGame.setDisable(false);
             checkBox2.setDisable(true);
             checkBox3.setDisable(true);
             checkBox4.setDisable(true);
             checkBox5.setDisable(true);
-         }else if (!checkBox1.isSelected()){
-             checkBox2.setDisable(false);
-             checkBox3.setDisable(false);
-             checkBox4.setDisable(false);
-             checkBox5.setDisable(false);
-         }
+        } else if (!checkBox1.isSelected()) {
+            startGame.setDisable(true);
+            checkBox2.setDisable(false);
+            checkBox3.setDisable(false);
+            checkBox4.setDisable(false);
+            checkBox5.setDisable(false);
+        }
     }
-    public void checkBox2Clicked(){
-        if (checkBox2.isSelected()){
-        	numberPlayers=1;
+
+    public void checkBox2Clicked() {
+        if (checkBox2.isSelected()) {
+            startGame.setDisable(false);
+            numberPlayers = 1;
             checkBox1.setDisable(true);
             checkBox3.setDisable(true);
             checkBox4.setDisable(true);
             checkBox5.setDisable(true);
-        }else if (!checkBox2.isSelected()){
+        } else if (!checkBox2.isSelected()) {
+            startGame.setDisable(true);
             checkBox1.setDisable(false);
             checkBox3.setDisable(false);
             checkBox4.setDisable(false);
@@ -65,14 +76,17 @@ public class GameMode {
         }
     }
 
-    public void checkBox3Clicked(){
-        if (checkBox3.isSelected()){
-        	numberPlayers=2;
+    public void checkBox3Clicked() {
+
+        if (checkBox3.isSelected()) {
+            startGame.setDisable(false);
+            numberPlayers = 2;
             checkBox1.setDisable(true);
             checkBox2.setDisable(true);
             checkBox4.setDisable(true);
             checkBox5.setDisable(true);
-        }else if (!checkBox3.isSelected()){
+        } else if (!checkBox3.isSelected()) {
+            startGame.setDisable(true);
             checkBox1.setDisable(false);
             checkBox2.setDisable(false);
             checkBox4.setDisable(false);
@@ -80,14 +94,16 @@ public class GameMode {
         }
     }
 
-    public void checkBox4Clicked(){
-        if (checkBox4.isSelected()){
-        	numberPlayers=3;
+    public void checkBox4Clicked() {
+        if (checkBox4.isSelected()) {
+            startGame.setDisable(false);
+            numberPlayers = 3;
             checkBox1.setDisable(true);
             checkBox3.setDisable(true);
             checkBox2.setDisable(true);
             checkBox5.setDisable(true);
-        }else if (!checkBox4.isSelected()){
+        } else if (!checkBox4.isSelected()) {
+            startGame.setDisable(true);
             checkBox1.setDisable(false);
             checkBox3.setDisable(false);
             checkBox2.setDisable(false);
@@ -95,14 +111,16 @@ public class GameMode {
         }
     }
 
-    public void checkBox5Clicked(){
-        if (checkBox5.isSelected()){
-        	numberPlayers=4;
+    public void checkBox5Clicked() {
+        if (checkBox5.isSelected()) {
+            startGame.setDisable(false);
+            numberPlayers = 4;
             checkBox1.setDisable(true);
             checkBox3.setDisable(true);
             checkBox4.setDisable(true);
             checkBox2.setDisable(true);
-        }else if (!checkBox5.isSelected()){
+        } else if (!checkBox5.isSelected()) {
+            startGame.setDisable(true);
             checkBox1.setDisable(false);
             checkBox3.setDisable(false);
             checkBox4.setDisable(false);

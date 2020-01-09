@@ -24,6 +24,7 @@ public class PlayTurn {
     private int firstPlayer = 0;
     private int maxDiceValue = 0;
     private int numberPlayer = 0;
+    private Sound sound = new Sound();
 
     @FXML
     private Text playerText;
@@ -164,6 +165,7 @@ public class PlayTurn {
     
     @FXML
     void rollDiceClicked(ActionEvent event) {
+        sound.playDiceSound();
         if(i < 4){
             rotatedDice1();
             if(maxDiceValue<diceResult) {
@@ -257,6 +259,7 @@ public class PlayTurn {
         diceResult = dice1.Rolldice();
         rt.setOnFinished(actionEvent -> {
             dice.setImage(new Image("file:src/Image/" + diceResult + ".png"));
+            sound.stopDiceSound();
         });
         rt.play();
     }
