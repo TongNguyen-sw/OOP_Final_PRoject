@@ -14,14 +14,16 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class PlayTurn {
     private String[] player = {"Yellow" , "Green", "Blue", "Red"};
     public String[] playerResult = new String[4];
     private int i = 0;
-    private int firstPlayer=0;
-    private int maxDiceValue=0;
-    private int numberPlayer=0;
+    private int firstPlayer = 0;
+    private int maxDiceValue = 0;
+    private int numberPlayer = 0;
 
     @FXML
     private Text playerText;
@@ -84,6 +86,9 @@ public class PlayTurn {
     private Text rollDiceAgainNoti;
 
     @FXML
+    private Text playWarning;
+
+    @FXML
     private Button setAllName;
 
     @FXML
@@ -91,10 +96,22 @@ public class PlayTurn {
 
     @FXML
     void PlayButtonClicked(ActionEvent event) throws IOException {
-    	Main.currentStage.setUserData(setUserData());
-        Parent root = FXMLLoader.load(getClass().getResource("../sample/GamePlay.fxml"));
-        Stage stage = (Stage) PlayButton.getScene().getWindow();
-        stage.setScene(new Scene(root, 970, 720));
+        if (i == 4){
+            Main.currentStage.setUserData(setUserData());
+            Parent root = FXMLLoader.load(getClass().getResource("../sample/GamePlay.fxml"));
+            Stage stage = (Stage) PlayButton.getScene().getWindow();
+            stage.setScene(new Scene(root, 970, 720));
+        } else {
+            Timer timer = new Timer();
+            TimerTask timerTask = new TimerTask() {
+                @Override
+                public void run() {
+                    playWarning.setText("");
+                }
+            } ;
+            playWarning.setText("Cannot move on to play until all player roll dice");
+            timer.schedule(timerTask, 3000);
+        }
     }
 
     public static class UserData{

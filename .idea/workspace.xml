@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GameMode.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GameMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/GameMode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/GamePlay.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/PlayTurn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/PlayTurn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/PlayTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/PlayTurn.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,19 +27,15 @@
   </component>
   <component name="ProjectId" id="1W3iUZxhK3xIv9uYumTjPjo4qIb" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="G:/javafx-sdk-11.0.2/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample/GamePlay.fxml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -55,7 +53,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="Quang1" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;G:\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml,javafx.media" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
@@ -84,7 +82,6 @@
       <updated>1578384695615</updated>
       <workItem from="1578384697005" duration="1368000" />
       <workItem from="1578388087976" duration="1798000" />
-      <workItem from="1578477268595" duration="8632000" />
     </task>
     <task id="LOCAL-00001" summary="Play Turn sketch">
       <created>1578389354453</created>
@@ -100,14 +97,7 @@
       <option name="project" value="LOCAL" />
       <updated>1578474955527</updated>
     </task>
-    <task id="LOCAL-00003" summary="Updated dice animation, create variable to store final value">
-      <created>1578497143009</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1578497143009</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +133,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Play Turn sketch" />
     <MESSAGE value="This is lastest version. Clone and keep working" />
-    <MESSAGE value="Updated dice animation, create variable to store final value" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated dice animation, create variable to store final value" />
+    <option name="LAST_COMMIT_MESSAGE" value="This is lastest version. Clone and keep working" />
   </component>
 </project>
