@@ -165,8 +165,8 @@ public class PlayTurn {
     
     @FXML
     void rollDiceClicked(ActionEvent event) {
-        sound.playDiceSound();
         if(i < 4){
+            sound.playDiceSound();
             rotatedDice1();
             if(maxDiceValue<diceResult) {
         		firstPlayer=i;

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="This is lastest version. Clone and keep working">
+    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GameMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/GamePlay.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GamePlay.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GamePlay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/PlayTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/PlayTurn.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,13 +24,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1W3iUZxhK3xIv9uYumTjPjo4qIb" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample/GamePlay.fxml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ass2Final 2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,7 +53,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="Quang1" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;G:\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml,javafx.media" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />

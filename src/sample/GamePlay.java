@@ -4,6 +4,7 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.RotateTransition;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +20,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -29,6 +31,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
+import java.util.TimerTask;
 
 public class GamePlay {
 
@@ -45,7 +48,8 @@ public class GamePlay {
     @FXML private StackPane c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17
     , c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28, c29, c30, c31, c32
     , c33, c34, c35, c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47;
-    @FXML Label lb_player1, lb_player2, lb_player3, lb_player4; 
+    @FXML Label lb_player1, lb_player2, lb_player3, lb_player4;
+    @FXML Text timerText;
 
     RollDices d1 = new RollDices();
     RollDices d2 = new RollDices();
@@ -71,6 +75,7 @@ public class GamePlay {
         setupPlayers();
         setupPlayerNames();
         initStackPanes();
+        time();
     }
 
 
@@ -383,7 +388,22 @@ public class GamePlay {
     	if(currentPlayer>3)
         	currentPlayer=0;
     }
-    
+
+    private int counter = 0;
+    Timer timer = new Timer();
+
+    private void time(){
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Platform.runLater(() -> {
+                    timerText.setText(String.format("%02d:%02d:%02d", counter / 1000 / 60, (counter / 1000) % 60, (counter % 1000) / 10));
+                    counter++;
+                    time();
+                });
+            }
+        },1);
+    }
 }
 
 
