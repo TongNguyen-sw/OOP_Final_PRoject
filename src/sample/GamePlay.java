@@ -67,6 +67,8 @@ public class GamePlay {
     private int interval=0;
     private Timeline timeline;
     private MyThread thread;
+    private int counter = 0;
+    Timer timer = new Timer();
 
     public void initialize(){
         dice1.setImage(new Image("file:src/Image/" + d1.Rolldice() + ".png"));
@@ -77,12 +79,8 @@ public class GamePlay {
         initStackPanes();
         time();
     }
-
-
     
     class MyThread extends Thread{
-    	
-    	Timer timer;
     	int to;
     	Horse horse;
     	public MyThread( int _to, Horse _horse) {
@@ -93,7 +91,7 @@ public class GamePlay {
     	
     	@Override
     	public void run() {
-    	     timeline= new Timeline(new KeyFrame(Duration.millis(500), ev -> {
+    	     timeline= new Timeline(new KeyFrame(Duration.millis(350), ev -> {
     	    	interval--;
     	    	if(interval<0) {
 	 	    		increaseCurrentPlayerIndex();
@@ -104,7 +102,9 @@ public class GamePlay {
 	 	    		return;
 	         	}
     	    	else {
-        	    	this.horse.increasePosition();	
+        	    	this.horse.increasePosition();
+        	    	if(this.horse.getPosition()>47)
+        	    		this.horse.setPosition(0);
         	    	int horsePosition=this.horse.getPosition();
      	        	StackPane sp=stackPanes.get(horsePosition);
     	    		ImageView imgv=this.horse.getImgHorse();
@@ -177,9 +177,8 @@ public class GamePlay {
         lb_player4.setText(playerNames[3]);
 	}
 
-	//how many players and playernames, which player first, setup specific roll function for player and for machine
+	//how many players and player names, which player first, setup specific roll function for player and for machine
 	private void setupPlayers() {
-		// TODO Auto-generated method stub
     	userData=(UserData) Main.currentStage.getUserData();
     	numberPlayers=userData.getNumberPlayers();
     	playerNames=userData.getPlayerNames();
@@ -191,7 +190,6 @@ public class GamePlay {
 				players[i]=new Player(playerNames[i], false) {
 					@Override
 					public void rollDices() {
-						// TODO Auto-generated method stub
 						rotatedDice1();
 						rotatedDice2();
 						//waiting for player choose what way to go then handler that choice
@@ -202,7 +200,6 @@ public class GamePlay {
 				players[i]=new Player(playerNames[i], true) {
 					@Override
 					public void rollDices() {
-						// TODO Auto-generated method stub
 						rotatedDice1();
 						rotatedDice2();
 						//randomchoice and next player rolldice
@@ -215,18 +212,17 @@ public class GamePlay {
 				break;
 			}
 			case 1:{
-				players[i].setHorseColor(gh0, gh1, gh2, gh3);
-				break;
-			}
-			case 2:{
 				players[i].setHorseColor(bh0, bh1, bh2, bh3);
 				break;
 			}
-			case 3:{
+			case 2:{
 				players[i].setHorseColor(rh0, rh1, rh2, rh3);
 				break;
 			}
-
+			case 3:{
+				players[i].setHorseColor(gh0, gh1, gh2, gh3);
+				break;
+			}
 			default:
 				break;
 			}
@@ -242,11 +238,6 @@ public class GamePlay {
             finalValue = d1.getValue();
             //chooseValue1 = false;
             System.out.println(finalValue);
-        } else {
-            ColorAdjust colorAdjust = new ColorAdjust();
-            value1.setEffect(colorAdjust);
-            finalValue -= d1.getValue();
-            chooseValue1 = true;
         }
         checkAndGo(finalValue);
     }
@@ -259,27 +250,15 @@ public class GamePlay {
             finalValue = d2.getValue();
             System.out.println(finalValue);
             //chooseValue2 = false;
-        } else {
-            ColorAdjust colorAdjust = new ColorAdjust();
-            value2.setEffect(colorAdjust);
-            finalValue -= d2.getValue();
-            chooseValue2 = true;
-        }
+        } 
         checkAndGo(finalValue);
     }
 
     public void getBothValue(){
     	finalValue = 0;
         if (chooseBothValue){
-            chooseValue1 = false;
-            chooseValue2 = false;
             finalValue = d1.getValue() + d2.getValue();
             System.out.println(finalValue);
-            //chooseBothValue = false;
-        }else {
-            chooseBothValue=true;
-            chooseValue1 = true;
-            chooseValue2 = true;
         }
         checkAndGo(finalValue);
     }
@@ -303,6 +282,7 @@ public class GamePlay {
             dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
             value2.setImage(new Image("file:src/Image/" + d2.getValue() + ".png"));
             sound.stopDiceSound();
+            checkFirstStep();
         });
         rt.play();
     }
@@ -312,10 +292,36 @@ public class GamePlay {
         chooseBoth.setDisable(false);
         sound.playDiceSound();
         players[currentPlayer].rollDices();
-        resetDisableButton(false);
+    	resetDisableButton(false);
     }
 
-    public void stopClicked(ActionEvent actionEvent) throws IOException {
+    private void checkFirstStep() {
+		// TODO Auto-generated method stub
+    	Horse horse;
+        for(int i=0;i<4;i++) {
+			horse=players[currentPlayer].getHorses()[i];
+			if(horse.isFinished()) {
+				continue; 
+			}
+			if(horse.isOnHouse()) {
+				if(d1.getValue()==6||d2.getValue()==6) {
+					horse.setOnHouse(false);
+					horse.setPosition(horse.getPosition()+12*currentPlayer);
+					thread=new MyThread(1, horse);
+					thread.start();
+					resetDisableButton(true);
+				}
+				else {
+					thread=new MyThread(0, horse);
+					thread.start();
+					resetDisableButton(true);
+				}
+			}
+			break;
+        }
+	}
+
+	public void stopClicked(ActionEvent actionEvent) throws IOException {
         Stage primaryStage = (Stage) stop.getScene().getWindow();
         GaussianBlur blur = new GaussianBlur(3);
         gamePlay.setEffect(blur);
@@ -389,9 +395,6 @@ public class GamePlay {
         	currentPlayer=0;
     }
 
-    private int counter = 0;
-    Timer timer = new Timer();
-
     private void time(){
         timer.schedule(new TimerTask() {
             @Override
@@ -404,6 +407,22 @@ public class GamePlay {
             }
         },1);
     }
+    
+    // what dice value can choose to go
+    private void setButtonsCanChoose(boolean _value1, boolean _value2, boolean _both) {
+    	this.value1.setDisable(!_value1);
+    	this.value2.setDisable(!_value2);
+    	this.chooseBoth.setDisable(!_both);
+    	if(!_value1&&!_value2&&!_both) {
+    		rolldice.setDisable(false);
+    	}
+    }
+    
+    private boolean checkCanGo(Horse horse, int destination) {
+    	boolean result=false;
+    	return result;
+    }
+    
 }
 
 
