@@ -9,7 +9,16 @@ public class Horse {
 	private int position;
 	private boolean isOnHouse;
 	private boolean isFinished;
+	private int playerIndex;
 	
+	public int getPlayerIndex() {
+		return playerIndex;
+	}
+
+	public void setPlayerIndex(int playerIndex) {
+		this.playerIndex = playerIndex;
+	}
+
 	public Horse(ImageView imgHorse, int position, boolean isOnHouse) {
 		super();
 		this.imgHorse = imgHorse;
@@ -18,11 +27,12 @@ public class Horse {
 		this.isFinished=false;
 	}
 	
-	public Horse( int position, boolean isOnHouse) {
+	public Horse( int position, boolean isOnHouse, int playerIndex) {
 		super();
 		this.position = position;
 		this.isOnHouse = isOnHouse;
 		this.isFinished=false;
+		this.playerIndex=playerIndex;
 	}
 
 	public Horse() {

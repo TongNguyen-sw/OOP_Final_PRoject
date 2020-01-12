@@ -18,6 +18,7 @@ import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -48,8 +49,9 @@ public class GamePlay {
     @FXML private StackPane c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17
     , c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28, c29, c30, c31, c32
     , c33, c34, c35, c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47;
-    @FXML Label lb_player1, lb_player2, lb_player3, lb_player4;
+    @FXML Label lb_player1, lb_player2, lb_player3, lb_player4, lb_score_player1, lb_score_player2, lb_score_player3, lb_score_player4;
     @FXML Text timerText;
+    @FXML AnchorPane h1, h2, h3, h4;
 
     RollDices d1 = new RollDices();
     RollDices d2 = new RollDices();
@@ -68,6 +70,8 @@ public class GamePlay {
     private Timeline timeline;
     private MyThread thread;
     private int counter = 0;
+    private Horse[] horses;
+    private AnchorPane homes[];
     Timer timer = new Timer();
 
     public void initialize(){
@@ -75,12 +79,24 @@ public class GamePlay {
         dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
         chooseBoth.setDisable(true);
         setupPlayers();
-        setupPlayerNames();
+        initPlayerNames();
         initStackPanes();
+        setScore();
         time();
+        initHorseAndHome();
     }
     
-    class MyThread extends Thread{
+    private void initHorseAndHome() {
+		// TODO Auto-generated method stub
+    	horses=new Horse[48];
+        homes=new AnchorPane[4];
+        homes[0]=h1;
+        homes[1]=h2;
+        homes[2]=h3;
+        homes[3]=h4;
+	}
+
+	class MyThread extends Thread{
     	int to;
     	Horse horse;
     	public MyThread( int _to, Horse _horse) {
@@ -99,6 +115,18 @@ public class GamePlay {
 	 	    		lb_currentplayername.setText(playerNames[currentPlayer]);
 	 	    		timeline.stop();
 	 	    		thread.stop();
+	 	    		int currentHorseindexInArray=horse.getPosition();
+	 	    		Horse currentHorse=horses[currentHorseindexInArray];
+	 	    		if(currentHorse!=null) {
+	 	    			currentHorse.setPosition(0);
+	 	    			currentHorse.setOnHouse(true);
+	 	    			homes[currentHorse.getPlayerIndex()].getChildren().add(currentHorse.getImgHorse());
+	 	    			players[currentHorse.getPlayerIndex()].setScore(players[currentHorse.getPlayerIndex()].getScore()-2);
+	 	    			players[horse.getPlayerIndex()].setScore(players[horse.getPlayerIndex()].getScore()+2);
+	 	    		}
+	 	    		if(horse.getPosition()!=0)
+	 	    			horses[currentHorseindexInArray]= horse;
+	 	    		setScore();
 	 	    		return;
 	         	}
     	    	else {
@@ -169,7 +197,7 @@ public class GamePlay {
 		stackPanes.add(c47);
 	}
 
-	private void setupPlayerNames() {
+	private void initPlayerNames() {
 		// TODO Auto-generated method stub
     	lb_player1.setText(playerNames[0]);
         lb_player2.setText(playerNames[1]);
@@ -187,7 +215,7 @@ public class GamePlay {
     	players =new Player[4];
 		for(int i=0;i<4;i++) {
 			if(i<numberPlayers) {
-				players[i]=new Player(playerNames[i], false) {
+				players[i]=new Player(playerNames[i], false, i) {
 					@Override
 					public void rollDices() {
 						rotatedDice1();
@@ -197,7 +225,7 @@ public class GamePlay {
 				};
 			}
 			else {
-				players[i]=new Player(playerNames[i], true) {
+				players[i]=new Player(playerNames[i], true, i) {
 					@Override
 					public void rollDices() {
 						rotatedDice1();
@@ -239,7 +267,7 @@ public class GamePlay {
             //chooseValue1 = false;
             System.out.println(finalValue);
         }
-        checkAndGo(finalValue);
+        go(finalValue);
     }
 
 	public void getValueDice2(){
@@ -251,7 +279,7 @@ public class GamePlay {
             System.out.println(finalValue);
             //chooseValue2 = false;
         } 
-        checkAndGo(finalValue);
+        go(finalValue);
     }
 
     public void getBothValue(){
@@ -260,7 +288,7 @@ public class GamePlay {
             finalValue = d1.getValue() + d2.getValue();
             System.out.println(finalValue);
         }
-        checkAndGo(finalValue);
+        go(finalValue);
     }
 
     public void rotatedDice1() {
@@ -282,7 +310,24 @@ public class GamePlay {
             dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
             value2.setImage(new Image("file:src/Image/" + d2.getValue() + ".png"));
             sound.stopDiceSound();
-            checkFirstStep();
+            Horse horse;
+            for(int i=0;i<4;i++) {
+    			horse=players[currentPlayer].getHorses()[i];
+    			if(horse.isFinished()) {
+    				continue; 
+    			}
+                boolean[] result=checkCanGo(horse, d1.getValue(), d2.getValue());
+    			setButtonsCanChoose(result);
+    			if(result[0]==false&&result[1]==false&&result[2]==false) {
+    				increaseCurrentPlayerIndex();
+    				lb_currentplayername.setText(playerNames[currentPlayer]);
+    				resetDisableButton(true);
+    			}
+    			else {
+    				checkFirstStep(horse);
+    			}
+    			break;
+            }
         });
         rt.play();
     }
@@ -295,30 +340,24 @@ public class GamePlay {
     	resetDisableButton(false);
     }
 
-    private void checkFirstStep() {
+    private void checkFirstStep(Horse horse) {
 		// TODO Auto-generated method stub
-    	Horse horse;
-        for(int i=0;i<4;i++) {
-			horse=players[currentPlayer].getHorses()[i];
-			if(horse.isFinished()) {
-				continue; 
+       
+		if(horse.isOnHouse()) {
+			if(d1.getValue()==6||d2.getValue()==6) {
+				horse.setOnHouse(false);
+				horse.setPosition(horse.getPosition()+12*currentPlayer);
+				thread=new MyThread(1, horse);
+				thread.start();
+				resetDisableButton(true);
 			}
-			if(horse.isOnHouse()) {
-				if(d1.getValue()==6||d2.getValue()==6) {
-					horse.setOnHouse(false);
-					horse.setPosition(horse.getPosition()+12*currentPlayer);
-					thread=new MyThread(1, horse);
-					thread.start();
-					resetDisableButton(true);
-				}
-				else {
-					thread=new MyThread(0, horse);
-					thread.start();
-					resetDisableButton(true);
-				}
+			else {
+				thread=new MyThread(0, horse);
+				thread.start();
+				resetDisableButton(true);
 			}
-			break;
-        }
+		}
+		
 	}
 
 	public void stopClicked(ActionEvent actionEvent) throws IOException {
@@ -373,7 +412,7 @@ public class GamePlay {
     }
 
     //check rules and go seahorse
-    private void checkAndGo(int finalValue2) {
+    private void go(int finalValue2) {
     	resetDisableButton(true);
     	rolldice.setDisable(true);
 		// TODO Auto-generated method stub
@@ -382,6 +421,7 @@ public class GamePlay {
 			if(horse.isFinished()) {
 				continue;
 			}
+			horses[horse.getPosition()]=null;
 			thread=new MyThread(finalValue2, horse);
 			thread.start();
 			break;
@@ -409,18 +449,80 @@ public class GamePlay {
     }
     
     // what dice value can choose to go
-    private void setButtonsCanChoose(boolean _value1, boolean _value2, boolean _both) {
-    	this.value1.setDisable(!_value1);
-    	this.value2.setDisable(!_value2);
-    	this.chooseBoth.setDisable(!_both);
-    	if(!_value1&&!_value2&&!_both) {
+    private void setButtonsCanChoose(boolean [] value) {
+//    	this.value1.setDisable(!value[0]);
+//    	this.value2.setDisable(!value[1]);
+    	BoxBlur boxblur = new BoxBlur();
+    	ColorAdjust colorAdjust = new ColorAdjust();
+    	if(value[0]==true) {
+	        value1.setEffect(colorAdjust);
+    		value1.setDisable(false);
+    	}
+    	else {
+            value1.setEffect(boxblur);
+    		value1.setDisable(true);
+    	}
+    	if(value[1]==true) {
+    		value2.setEffect(colorAdjust);
+	        value2.setDisable(false);
+    	}
+    	else {
+    		value2.setEffect(boxblur);
+            value2.setDisable(true);
+    	}
+    	this.chooseBoth.setDisable(!value[2]);
+    	if(!value[0]&&!value[1]&&!value[2]) {
     		rolldice.setDisable(false);
+    	}
+    	else {
+    		rolldice.setDisable(true);
     	}
     }
     
-    private boolean checkCanGo(Horse horse, int destination) {
-    	boolean result=false;
+    private boolean[] checkCanGo(Horse horse, int number1, int number2) {
+    	boolean result[]=new boolean[3];
+    	for(int i=0;i<3;i++) {
+    		result[i]=true;
+    	}
+    	int currentPosition=horse.getPosition(); 
+    	for(Horse h:horses) {
+    		if(h==null)
+    			continue;
+    		int max=currentPosition+number1;
+    		int localPosition=h.getPosition();
+    		if(localPosition>currentPosition&&localPosition<max) {
+    			result[0]=false;
+    			break;
+    		}
+    	}
+    	for(Horse h:horses) {
+    		if(h==null)
+    			continue;
+    		int max=currentPosition+number2;
+    		int localPosition=h.getPosition();
+    		if(localPosition>currentPosition&&localPosition<max) {
+    			result[1]=false;
+    			break;
+    		}
+    	}
+    	for(Horse h:horses) {
+    		if(h==null)
+    			continue;
+    		int max=currentPosition+number2+number1;
+    		int localPosition=h.getPosition();
+    		if(localPosition>currentPosition&&localPosition<max) {
+    			result[2]=false;
+    			break;
+    		}
+    	}
     	return result;
+    }
+    
+    private void setScore() {
+    	lb_score_player1.setText("Score: "+players[0].getScore());
+    	lb_score_player2.setText("Score: "+players[1].getScore());
+    	lb_score_player3.setText("Score: "+players[2].getScore());
+    	lb_score_player4.setText("Score: "+players[3].getScore());
     }
     
 }

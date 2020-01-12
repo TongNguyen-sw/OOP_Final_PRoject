@@ -26,7 +26,7 @@
             <children>
                 <StackPane prefHeight="250.0" prefWidth="250.0">
                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane fx:id="h1" prefHeight="200.0" prefWidth="200.0">
                             <children>
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
                                 <Circle fill="WHITE" layoutX="125.0" layoutY="125.0" radius="109.0" stroke="#fff604" strokeType="INSIDE" strokeWidth="5.0" />
@@ -62,7 +62,7 @@
                                         <DropShadow blurType="ONE_PASS_BOX" color="#fff604" spread="1.0" />
                                     </effect>
                                 </ImageView>
-                                <Label layoutX="10.0" layoutY="8.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                                <Label fx:id="lb_score_player1" layoutX="10.0" layoutY="8.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
                                 <Label fx:id="lb_player1" alignment="CENTER" layoutX="95.0" layoutY="32.0" prefHeight="17.0" prefWidth="61.0" text="Label" />
                             </children>
                         </AnchorPane>
@@ -392,7 +392,7 @@
                 <ImageView fx:id="dice2" fitHeight="50.0" fitWidth="50.0" layoutX="388.0" layoutY="334.0" onDragDetected="#rotatedDice2" pickOnBounds="true" preserveRatio="true" />
                 <StackPane layoutY="468.0" prefHeight="250.0" prefWidth="250.0">
                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane fx:id="h2" prefHeight="200.0" prefWidth="200.0">
                             <children>
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
                                 <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" />
@@ -428,7 +428,7 @@
                                         <DropShadow blurType="ONE_PASS_BOX" color="DODGERBLUE" spread="1.0" />
                                     </effect>
                                 </ImageView>
-                                <Label layoutX="6.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                                <Label fx:id="lb_score_player2" layoutX="6.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
                         <Label fx:id="lb_player2" alignment="CENTER" layoutX="111.0" layoutY="37.0" text="Label" />
                             </children>
                         </AnchorPane>
@@ -436,7 +436,7 @@
                 </StackPane>
                 <StackPane layoutX="519.0" prefHeight="250.0" prefWidth="250.0">
                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane fx:id="h4" prefHeight="200.0" prefWidth="200.0">
                             <children>
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
                                 <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="#37ff00" strokeType="INSIDE" strokeWidth="5.0" />
@@ -472,7 +472,7 @@
                                         <DropShadow blurType="ONE_PASS_BOX" color="#37ff00" spread="1.0" />
                                     </effect>
                                 </ImageView>
-                                <Label layoutX="175.0" layoutY="6.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                                <Label fx:id="lb_score_player4" layoutX="175.0" layoutY="6.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
                         <Label fx:id="lb_player4" alignment="CENTER" layoutX="111.0" layoutY="31.0" text="Label" />
                             </children>
                         </AnchorPane>
@@ -480,7 +480,7 @@
                 </StackPane>
                 <StackPane layoutX="519.0" layoutY="468.0" prefHeight="250.0" prefWidth="250.0">
                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane fx:id="h3" prefHeight="200.0" prefWidth="200.0">
                             <children>
                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" stroke="RED" strokeType="INSIDE" strokeWidth="5.0" width="250.0" />
                                 <Circle fill="WHITE" layoutX="125.0" layoutY="123.0" radius="109.0" stroke="RED" strokeType="INSIDE" strokeWidth="5.0" />
@@ -516,7 +516,7 @@
                                         <DropShadow blurType="ONE_PASS_BOX" color="RED" spread="1.0" />
                                     </effect>
                                 </ImageView>
-                                <Label layoutX="176.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
+                                <Label fx:id="lb_score_player3" layoutX="176.0" layoutY="228.0" prefHeight="17.0" prefWidth="68.0" text="Score:" />
                         <Label fx:id="lb_player3" layoutX="111.0" layoutY="37.0" text="Label" />
                             </children>
                         </AnchorPane>

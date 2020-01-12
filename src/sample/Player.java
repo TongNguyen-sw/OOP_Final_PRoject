@@ -22,13 +22,13 @@ public abstract class Player {
 		this.isMachine = isMachine;
 	}
 
-	public Player(String name, boolean isMaChine) {
+	public Player(String name, boolean isMaChine, int index) {
 		this.name=name;
 		this.isMachine=isMaChine;
 		this.score=0;
 		this.horses=new Horse[4];
 		for(int i=0;i<4;i++) {
-			this.horses[i]=new Horse(0, true);
+			this.horses[i]=new Horse(0, true, index);
 		}
 	}
 	
