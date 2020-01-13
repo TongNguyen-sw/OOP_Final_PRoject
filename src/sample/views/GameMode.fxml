@@ -11,7 +11,7 @@
     <children>
         <VBox layoutX="176.0" layoutY="161.0" prefHeight="372.0" prefWidth="577.0">
             <children>
-                <CheckBox fx:id="checkBox1" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox1Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../css/checkbox.css" text="None Player and Four Computers">
+                <CheckBox fx:id="checkBox1" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox1Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../../css/checkbox.css" text="None Player and Four Computers">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
@@ -22,7 +22,7 @@
                         <Font name="System Bold" size="30.0" />
                     </font>
                 </CheckBox>
-                <CheckBox fx:id="checkBox2" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox2Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../css/checkbox.css" text="One Player and Three Computers">
+                <CheckBox fx:id="checkBox2" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox2Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../../css/checkbox.css" text="One Player and Three Computers">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
@@ -33,7 +33,7 @@
                         <Font name="System Bold" size="30.0" />
                     </font>
                 </CheckBox>
-                <CheckBox fx:id="checkBox3" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox3Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../css/checkbox.css" text="Two Players and Two Computers">
+                <CheckBox fx:id="checkBox3" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox3Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../../css/checkbox.css" text="Two Players and Two Computers">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
@@ -44,7 +44,7 @@
                         <Font name="System Bold" size="30.0" />
                     </font>
                 </CheckBox>
-                <CheckBox fx:id="checkBox4" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox4Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../css/checkbox.css" text="Three Players and  One Computer">
+                <CheckBox fx:id="checkBox4" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox4Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../../css/checkbox.css" text="Three Players and  One Computer">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
@@ -55,7 +55,7 @@
                         <Font name="System Bold" size="30.0" />
                     </font>
                 </CheckBox>
-                <CheckBox fx:id="checkBox5" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox5Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../css/checkbox.css" text="Four Players and None Computer">
+                <CheckBox fx:id="checkBox5" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#checkBox5Clicked" prefHeight="65.0" prefWidth="540.0" style="-fx-text-fill: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),        #9d4024,        #d86e3a,        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" stylesheets="@../../css/checkbox.css" text="Four Players and None Computer">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
@@ -68,7 +68,7 @@
                 </CheckBox>
             </children>
         </VBox>
-        <Button fx:id="startGame" layoutX="364.0" layoutY="560.0" mnemonicParsing="false" onAction="#startGameClicked" prefHeight="54.0" prefWidth="220.0" stylesheets="@../css/buttons.css" text="START" />
+        <Button fx:id="startGame" layoutX="364.0" layoutY="560.0" mnemonicParsing="false" onAction="#startGameClicked" prefHeight="54.0" prefWidth="220.0" stylesheets="@../../css/buttons.css" text="START" />
         <!--      <Button layoutY="-6.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="55.0" text="Back" />-->
         <Button fx:id="returnButton" focusTraversable="false" layoutY="-6.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="60.0" prefWidth="60.0" stylesheets="@/css/buttons.css">
             <graphic>
@@ -79,11 +79,11 @@
                 </ImageView>
             </graphic>
         </Button>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="64.0" layoutX="190.0" layoutY="72.0" stroke="WHITE" strokeType="INSIDE" width="591.0" />
-      <Text fill="#7c3c3c" layoutX="196.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set the Number of the Player and Computer" textAlignment="CENTER" wrappingWidth="579.27734375">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Text>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="64.0" layoutX="190.0" layoutY="72.0" stroke="WHITE" strokeType="INSIDE" width="591.0" />
+        <Text fill="#7c3c3c" layoutX="196.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set the Number of the Player and Computer" textAlignment="CENTER" wrappingWidth="579.27734375">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Text>
     </children>
 </AnchorPane>

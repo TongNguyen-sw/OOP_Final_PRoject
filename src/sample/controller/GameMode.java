@@ -1,4 +1,4 @@
-package sample;
+package sample.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import sample.Main;
 
 import java.io.IOException;
 
@@ -26,14 +27,14 @@ public class GameMode {
     @FXML
     private void backButtonClicked() throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("../sample/MainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../views/MainMenu.fxml"));
         Stage stage = (Stage) returnButton.getScene().getWindow();
         stage.getScene().setRoot(root);
     }
 
     public void startGameClicked(ActionEvent actionEvent) throws IOException {
         Main.currentStage.setUserData(numberPlayers);
-        Parent root = FXMLLoader.load(getClass().getResource("../sample/PlayTurn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../views/PlayTurn.fxml"));
         Stage stage = (Stage) returnButton.getScene().getWindow();
         stage.setScene(new Scene(root, 970, 720));
     }

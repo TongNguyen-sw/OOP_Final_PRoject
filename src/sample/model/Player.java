@@ -1,6 +1,7 @@
-package sample;
+package sample.model;
 
 import javafx.scene.image.ImageView;
+import sample.model.Horse;
 
 public abstract class Player {
 
@@ -8,7 +9,7 @@ public abstract class Player {
 	private Horse[] horses;
 	private int score;
 	private boolean isMachine;
-	
+
 	public Player() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -31,30 +32,30 @@ public abstract class Player {
 			this.horses[i]=new Horse(0, true, index);
 		}
 	}
-	
+
 	public void setHorseColor(ImageView img1, ImageView img2, ImageView img3, ImageView img4) {
 		for(int i=0;i<4;i++) {
 			switch (i) {
-			case 0:
-				horses[i].setImgHorse(img1);
-				break;
-			case 1:
-				horses[i].setImgHorse(img2);
-				break;
-			case 2:
-				horses[i].setImgHorse(img3);
-				break;
-			case 3:
-				horses[i].setImgHorse(img4);
-				break;
-			default:
-				break;
+				case 0:
+					horses[i].setImgHorse(img1);
+					break;
+				case 1:
+					horses[i].setImgHorse(img2);
+					break;
+				case 2:
+					horses[i].setImgHorse(img3);
+					break;
+				case 3:
+					horses[i].setImgHorse(img4);
+					break;
+				default:
+					break;
 			}
 		}
 	}
-	
+
 	public abstract void rollDices();
-	
+
 	public boolean isMachine() {
 		return isMachine;
 	}
@@ -81,5 +82,5 @@ public abstract class Player {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	
+
 }

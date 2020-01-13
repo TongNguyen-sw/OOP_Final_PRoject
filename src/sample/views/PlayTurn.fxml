@@ -16,17 +16,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PlayTurn">
+<AnchorPane prefHeight="720.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.PlayTurn">
     <children>
         <HBox alignment="CENTER_LEFT" layoutX="109.0" layoutY="167.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <GridPane prefHeight="720.0" prefWidth="685.0">
                     <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="45.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="45.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="188.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="197.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="203.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="51.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="51.0" />
                     </columnConstraints>
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -36,7 +36,7 @@
                     <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
                             <image>
-                                <Image url="@../Image/square.jpg" />
+                                <Image url="@../../Image/square.jpg" />
                             </image>
                             <effect>
                                 <InnerShadow choke="1.0" color="#fffb00" />
@@ -44,7 +44,7 @@
                         </ImageView>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                             <image>
-                                <Image url="@../Image/square.jpg" />
+                                <Image url="@../../Image/square.jpg" />
                             </image>
                             <effect>
                                 <InnerShadow choke="1.0" color="#007bff" />
@@ -52,7 +52,7 @@
                         </ImageView>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
                             <image>
-                                <Image url="@../Image/square.jpg" />
+                                <Image url="@../../Image/square.jpg" />
                             </image>
                             <effect>
                                 <InnerShadow choke="1.0" color="#08ff00" />
@@ -60,7 +60,7 @@
                         </ImageView>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                             <image>
-                                <Image url="@../Image/square.jpg" />
+                                <Image url="@../../Image/square.jpg" />
                             </image>
                             <effect>
                                 <InnerShadow choke="1.0" color="RED" />
@@ -70,7 +70,7 @@
                             <children>
                                 <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="73.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Image/horse.png" />
+                                        <Image url="@../../Image/horse.png" />
                                     </image>
                                     <effect>
                                         <DropShadow color="#fffb00" spread="0.6" />
@@ -84,7 +84,7 @@
                             <children>
                                 <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="35.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Image/horse.png" />
+                                        <Image url="@../../Image/horse.png" />
                                     </image>
                                     <effect>
                                         <DropShadow color="#08ff00" spread="0.46" />
@@ -98,7 +98,7 @@
                             <children>
                                 <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="68.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Image/horse.png" />
+                                        <Image url="@../../Image/horse.png" />
                                     </image>
                                     <effect>
                                         <DropShadow color="#007bff" spread="0.6" />
@@ -112,7 +112,7 @@
                             <children>
                                 <ImageView fitHeight="150.0" fitWidth="80.0" layoutX="35.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Image/horse.png" />
+                                        <Image url="@../../Image/horse.png" />
                                     </image>
                                     <effect>
                                         <DropShadow color="RED" spread="0.6" />
@@ -132,25 +132,25 @@
                                 </Text>
                                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="60.0" layoutY="32.0" pickOnBounds="true">
                                     <image>
-                                        <Image url="@../Image/square.jpg" />
+                                        <Image url="@../../Image/square.jpg" />
                                     </image>
                                     <effect>
                                         <InnerShadow choke="0.7" color="#f0e0d1" />
                                     </effect>
                                 </ImageView>
                                 <ImageView fx:id="dice" fitHeight="76.0" fitWidth="76.0" layoutX="62.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
-                        <Text fx:id="rollDiceAgainNoti" layoutX="54.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="109.5830078125">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Text>
+                                <Text fx:id="rollDiceAgainNoti" layoutX="54.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="109.5830078125">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
                             </children>
                         </AnchorPane>
                     </children>
                 </GridPane>
                 <AnchorPane prefHeight="720.0" prefWidth="289.0" style="-fx-background-color: #F0E0D1#F0E0D1;">
                     <children>
-                        <Button fx:id="rollDice" layoutX="84.0" layoutY="426.0" mnemonicParsing="false" onAction="#rollDiceClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Roll Dice">
+                        <Button fx:id="rollDice" layoutX="84.0" layoutY="426.0" mnemonicParsing="false" onAction="#rollDiceClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../../css/buttons.css" text="Roll Dice">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -210,17 +210,17 @@
                                 <Font size="15.0" />
                             </font>
                         </Text>
-                        <Button fx:id="setAllName" layoutX="82.0" layoutY="348.0" mnemonicParsing="false" onAction="#setNameClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Set names">
+                        <Button fx:id="setAllName" layoutX="82.0" layoutY="348.0" mnemonicParsing="false" onAction="#setNameClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../../css/buttons.css" text="Set names">
                             <font>
                                 <Font size="10.0" />
                             </font>
                         </Button>
-                  <Button fx:id="PlayButton" layoutX="84.0" layoutY="507.0" mnemonicParsing="false" onAction="#PlayButtonClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../css/buttons.css" text="Play" />
-                  <Text fx:id="playWarning" fill="#e81d1d" layoutX="40.0" layoutY="599.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.73291015625">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Text>
+                        <Button fx:id="PlayButton" layoutX="84.0" layoutY="507.0" mnemonicParsing="false" onAction="#PlayButtonClicked" prefHeight="60.0" prefWidth="120.0" stylesheets="@../../css/buttons.css" text="Play" />
+                        <Text fx:id="playWarning" fill="#e81d1d" layoutX="40.0" layoutY="599.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.73291015625">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Text>
                     </children>
                 </AnchorPane>
             </children>

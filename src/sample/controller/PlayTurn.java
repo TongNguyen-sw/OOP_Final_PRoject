@@ -1,4 +1,4 @@
-package sample;
+package sample.controller;
 
 import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
@@ -12,6 +12,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import sample.controller.RollDices;
+import sample.controller.Sound;
+import sample.Main;
 
 import java.io.IOException;
 import java.util.Timer;
@@ -99,7 +102,7 @@ public class PlayTurn {
     void PlayButtonClicked(ActionEvent event) throws IOException {
         if (i == 4){
             Main.currentStage.setUserData(setUserData());
-            Parent root = FXMLLoader.load(getClass().getResource("../sample/GamePlay.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../views/GamePlay.fxml"));
             Stage stage = (Stage) PlayButton.getScene().getWindow();
             stage.setScene(new Scene(root, 970, 720));
         } else {
@@ -116,62 +119,62 @@ public class PlayTurn {
     }
 
     public static class UserData{
-    	String playerNames[];
-    	int firstPlayer;
-    	int numberPlayers;
-		public String[] getPlayerNames() {
-			return playerNames;
-		}
-		public void setPlayerNames(String[] playerNames) {
-			this.playerNames = playerNames;
-		}
-		public int getFirstPlayer() {
-			return firstPlayer;
-		}
-		public void setFirstPlayer(int firstPlayer) {
-			this.firstPlayer = firstPlayer;
-		}
-		public int getNumberPlayers() {
-			return numberPlayers;
-		}
-		public void setNumberPlayers(int numberPlayers) {
-			this.numberPlayers = numberPlayers;
-		}
-		public UserData(String[] playerNames, int firstPlayer, int numberPlayers) {
-			super();
-			this.playerNames = playerNames;
-			this.firstPlayer = firstPlayer;
-			this.numberPlayers = numberPlayers;
-		}
-		public UserData() {
-			super();
-			// TODO Auto-generated constructor stub
-		}
-		
+        String playerNames[];
+        int firstPlayer;
+        int numberPlayers;
+        public String[] getPlayerNames() {
+            return playerNames;
+        }
+        public void setPlayerNames(String[] playerNames) {
+            this.playerNames = playerNames;
+        }
+        public int getFirstPlayer() {
+            return firstPlayer;
+        }
+        public void setFirstPlayer(int firstPlayer) {
+            this.firstPlayer = firstPlayer;
+        }
+        public int getNumberPlayers() {
+            return numberPlayers;
+        }
+        public void setNumberPlayers(int numberPlayers) {
+            this.numberPlayers = numberPlayers;
+        }
+        public UserData(String[] playerNames, int firstPlayer, int numberPlayers) {
+            super();
+            this.playerNames = playerNames;
+            this.firstPlayer = firstPlayer;
+            this.numberPlayers = numberPlayers;
+        }
+        public UserData() {
+            super();
+            // TODO Auto-generated constructor stub
+        }
+
     }
-    
+
     private UserData setUserData() {
-    	UserData userData=new UserData();
-    	String playerNames[]=new String[4];
-    	playerNames[0]=yellowChart.getText();
-    	playerNames[1]=greenChart.getText();
-    	playerNames[2]=blueChart.getText();
-    	playerNames[3]=redChart.getText();
-    	userData.setPlayerNames(playerNames);
-    	userData.setFirstPlayer(firstPlayer);
-    	userData.setNumberPlayers(numberPlayer);
-    	return userData;
+        UserData userData=new UserData();
+        String playerNames[]=new String[4];
+        playerNames[0]=yellowChart.getText();
+        playerNames[1]=greenChart.getText();
+        playerNames[2]=blueChart.getText();
+        playerNames[3]=redChart.getText();
+        userData.setPlayerNames(playerNames);
+        userData.setFirstPlayer(firstPlayer);
+        userData.setNumberPlayers(numberPlayer);
+        return userData;
     }
-    
+
     @FXML
     void rollDiceClicked(ActionEvent event) {
         if(i < 4){
             sound.playDiceSound();
             rotatedDice1();
             if(maxDiceValue<diceResult) {
-        		firstPlayer=i;
-        		maxDiceValue=diceResult;
-        	}
+                firstPlayer=i;
+                maxDiceValue=diceResult;
+            }
             playerText.setText("Player " + player[i]);
 
         }
@@ -232,16 +235,16 @@ public class PlayTurn {
     void setNameClicked(ActionEvent event){
         yellowNameText.setText(yellowName.getText());
         if (yellowName.getText().equals("")){ yellowChart.setText("Player 1");  }
-            else { yellowChart.setText(yellowName.getText()); }
+        else { yellowChart.setText(yellowName.getText()); }
         greenNameText.setText(greenName.getText());
         if (greenName.getText().equals("")){ greenChart.setText("Player 2");  }
-         else { greenChart.setText(greenName.getText());  }
+        else { greenChart.setText(greenName.getText());  }
         blueNameText.setText(blueName.getText());
         if (blueName.getText().equals("")) {blueChart.setText("Player 3"); }
-         else { blueChart.setText(blueName.getText());  }
+        else { blueChart.setText(blueName.getText());  }
         redNameText.setText(redName.getText());
         if (redName.getText().equals("")){ redChart.setText("Player 4"); }
-            else { redChart.setText(redName.getText());  }
+        else { redChart.setText(redName.getText());  }
     }
 
     private int diceResult;

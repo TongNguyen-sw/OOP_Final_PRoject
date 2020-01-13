@@ -8,10 +8,10 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-	public static Stage currentStage=null;
+    public static Stage currentStage=null;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("views/MainMenu.fxml"));
         primaryStage.setTitle("Horse Race Chess");
         Scene scene = new Scene(root,970,720);
         primaryStage.setScene(scene);
