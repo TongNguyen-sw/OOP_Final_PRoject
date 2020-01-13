@@ -3,145 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sample/ExitConfirm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sample/ExitConfirm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sample/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sample/GameMode.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sample/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sample/GamePlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sample/LanguageSwitch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sample/LanguageSwitch.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sample/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sample/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sample/OptionSelect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sample/OptionSelect.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sample/PlayTurn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sample/PlayTurn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/ExitConfirm.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/GameMode.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/GamePlay.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/LanguageSwitch.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/MainMenu.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/OptionSelect.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/PlayTurn.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/Settings.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/sound/dice.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/dice.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/sound/gocage.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/gocage.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/sound/kick.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/kick.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/sound/move.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/move.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/sound/outnest.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/outnest.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/sound/outnest.wav" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/outnest.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ExitComfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/ExitComfirm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ExitConfirm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/ExitConfirm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/GameMode.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/GameMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/GamePlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/GamePlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/LanguageSwitch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/LanguageSwitch.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/LanguageSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/LanguageSwitch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/OptionSelect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/OptionSelect.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/OptionSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/OptionSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/PlayTurn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/PlayTurn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/PlayTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/PlayTurn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/RollDices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/RollDices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Settings.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/Sound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sound/dice.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sound/dice.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sound/gocage.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sound/gocage.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sound/kick.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sound/kick.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sound/move.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sound/move.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sound/outnest.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sound/outnest.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sound/outnest.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/sound/outnest.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/LanguageSwitch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/LanguageSwitch.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/views/ExitConfirm.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/views/GameMode.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/views/GamePlay.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="550" selection-start-line="550" selection-end-line="550" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/views/LanguageSwitch.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/views/MainMenu.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/views/OptionSelect.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/views/PlayTurn.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="229" lean-forward="true" selection-start-line="229" selection-end-line="229" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -155,31 +26,6 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/sample/controller/ExitComfirm.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/GameMode.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/GamePlay.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/LanguageSwitch.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/OptionSelect.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/PlayTurn.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/RollDices.java" />
-        <option value="$PROJECT_DIR$/src/sample/controller/Sound.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/Horse.java" />
-        <option value="$PROJECT_DIR$/src/sample/model/Player.java" />
-        <option value="$PROJECT_DIR$/src/sample/views/ExitConfirm.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/views/GameMode.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/views/GamePlay.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/views/LanguageSwitch.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/views/MainMenu.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/views/OptionSelect.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/views/PlayTurn.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="628" />
     <option name="y" value="23" />
@@ -187,70 +33,11 @@
     <option name="height" value="792" />
   </component>
   <component name="ProjectId" id="1W3iUZxhK3xIv9uYumTjPjo4qIb" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="OOP_PRoject-tong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PRoject-tong" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PRoject-tong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PRoject-tong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PRoject-tong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PRoject-tong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PRoject-tong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PRoject-tong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PRoject-tong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PRoject-tong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PRoject-tong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PRoject-tong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="sound" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP_PRoject-tong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_PRoject-tong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578904188897" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample/GamePlay.fxml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -317,6 +104,7 @@
       <workItem from="1578888335466" duration="136000" />
       <workItem from="1578893829131" duration="7000" />
       <workItem from="1578902948805" duration="1206000" />
+      <workItem from="1578906735677" duration="280000" />
     </task>
     <task id="LOCAL-00001" summary="Play Turn sketch">
       <created>1578389354453</created>
@@ -335,43 +123,6 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1883000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="867" height="792" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4569697" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38714287" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32857144" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -381,12 +132,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -412,193 +157,5 @@
     <MESSAGE value="Play Turn sketch" />
     <MESSAGE value="This is lastest version. Clone and keep working" />
     <option name="LAST_COMMIT_MESSAGE" value="This is lastest version. Clone and keep working" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/GamePlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
-          <folding>
-            <element signature="e#16099#16454#0" expanded="true" />
-            <element signature="e#16453#16454#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/ExitComfirm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PATH_TO_FX$/javafx.fxml.jar!/javafx/fxml/FXMLLoader.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/ExitComfirm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/PlayTurn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="270" selection-start-line="270" selection-end-line="270" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/OptionSelect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/LanguageSwitch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/GamePlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="533" selection-start-line="533" selection-end-line="533" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/GameMode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/RollDices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controller/Sound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Horse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/ExitConfirm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/GameMode.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/GamePlay.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="550" selection-start-line="550" selection-end-line="550" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/LanguageSwitch.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/MainMenu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/OptionSelect.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/PlayTurn.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="229" lean-forward="true" selection-start-line="229" selection-end-line="229" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -20,9 +22,15 @@ import java.util.ResourceBundle;
 
 public class MainMenuController {
     @FXML
-    Button play, exit;
+    Button play, exit, online;
     @FXML
     AnchorPane mainMenu;
+    @FXML
+    private MenuButton language;
+    @FXML
+    private MenuItem vietnamese, english;
+
+    private Locale locale;
 
     public void playClicked(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../views/GameMode.fxml"));
@@ -33,32 +41,17 @@ public class MainMenuController {
     public void onlineClicked(ActionEvent actionEvent) {
     }
 
-    public void languageClicked(ActionEvent actionEvent) throws IOException {
-        Stage primaryStage = (Stage) exit.getScene().getWindow();
-        GaussianBlur blur = new GaussianBlur(3);
-        mainMenu.setEffect(blur);
-        Parent root = FXMLLoader.load(getClass().getResource("../views/LanguageSwitch.fxml"));
-        Stage dialog = new Stage();
-        Scene scene = new Scene(root,384.0,133.0);
-        scene.setFill(Color.TRANSPARENT);
-        dialog.setScene(scene);
-        dialog.initModality(Modality.WINDOW_MODAL);
-        dialog.initOwner(primaryStage);
-        dialog.initStyle(StageStyle.TRANSPARENT);
-        dialog.setResizable(false);
 
-        double centerXPosition = primaryStage.getX() + primaryStage.getWidth()/2d;
-        double centerYPosition = primaryStage.getY() + primaryStage.getHeight()/2d;
+    @FXML
+    void vietnameseClicked(ActionEvent actionEvent){
+        loadLang("el");
 
-        dialog.setOnShowing(event -> dialog.hide());
-
-        dialog.setOnShown(event -> {
-            dialog.setX(centerXPosition - dialog.getWidth()/2d);
-            dialog.setY(centerYPosition - dialog.getHeight()/2d);
-            dialog.show();
-        });
-        dialog.show();
     }
+    @FXML
+    void englishClicked(ActionEvent actionEvent){
+        loadLang("en");
+    }
+
 
     public void exitClicked(ActionEvent actionEvent) throws IOException {
         Stage primaryStage = (Stage) exit.getScene().getWindow();
@@ -85,5 +78,12 @@ public class MainMenuController {
         dialog.show();
     }
 
+    public void loadLang(String lang){
+        locale = new Locale(lang);
+        ResourceBundle bundle = ResourceBundle.getBundle("sample.lang", locale);
+        play.setText(bundle.getString("play"));
+        exit.setText(bundle.getString("exit"));
+        language.setText(bundle.getString("language"));
+        online.setText(bundle.getString("online"));
+    }
 }
-
