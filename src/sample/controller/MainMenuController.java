@@ -45,7 +45,6 @@ public class MainMenuController {
     @FXML
     void vietnameseClicked(ActionEvent actionEvent){
         loadLang("el");
-
     }
     @FXML
     void englishClicked(ActionEvent actionEvent){
@@ -85,5 +84,8 @@ public class MainMenuController {
         exit.setText(bundle.getString("exit"));
         language.setText(bundle.getString("language"));
         online.setText(bundle.getString("online"));
+    }
+    public void getLang(){
+        return langSet;
     }
 }

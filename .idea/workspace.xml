@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
+    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="Language draft">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/LanguageSwitch.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/views/LanguageSwitch.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/views/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +101,7 @@
       <workItem from="1578888335466" duration="136000" />
       <workItem from="1578893829131" duration="7000" />
       <workItem from="1578902948805" duration="1206000" />
-      <workItem from="1578906735677" duration="280000" />
+      <workItem from="1578906735677" duration="784000" />
     </task>
     <task id="LOCAL-00001" summary="Play Turn sketch">
       <created>1578389354453</created>
@@ -120,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578474955527</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Language draft">
+      <created>1578907104245</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578907104245</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +160,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Play Turn sketch" />
     <MESSAGE value="This is lastest version. Clone and keep working" />
-    <option name="LAST_COMMIT_MESSAGE" value="This is lastest version. Clone and keep working" />
+    <MESSAGE value="Language draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="Language draft" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controller/MainMenuController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
