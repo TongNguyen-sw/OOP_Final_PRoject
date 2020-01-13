@@ -110,13 +110,14 @@ public class GamePlay {
 
 		@Override
 		public void run() {
-			timeline= new Timeline(new KeyFrame(Duration.millis(350), ev -> {
+			timeline= new Timeline(new KeyFrame(Duration.millis(500), ev -> {
 				interval--;
 				if(interval<0) {
 					increaseCurrentPlayerIndex();
 					rolldice.setDisable(false);
 					lb_currentplayername.setText(playerNames[currentPlayer]);
 					timeline.stop();
+					sound.stopMoveSound();
 					thread.stop();
 					int currentHorseindexInArray=horse.getPosition();
 					Horse currentHorse=horses[currentHorseindexInArray];
@@ -348,6 +349,7 @@ public class GamePlay {
 
 		if(horse.isOnHouse()) {
 			if(d1.getValue()==6||d2.getValue()==6) {
+				sound.playOutNestSound();
 				horse.setOnHouse(false);
 				horse.setPosition(horse.getPosition()+12*currentPlayer);
 				thread=new MyThread(1, horse);
@@ -417,6 +419,7 @@ public class GamePlay {
 	//check rules and go seahorse
 	private void go(int finalValue2) {
 		resetDisableButton(true);
+		sound.playMoveSound();
 		rolldice.setDisable(true);
 		// TODO Auto-generated method stub
 		for(int i=0;i<4;i++) {

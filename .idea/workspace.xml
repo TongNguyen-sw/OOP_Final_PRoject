@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="Language draft">
+    <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/horseWhinny.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/roll.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/run.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/sound/horseWhinny.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/sound/roll.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/sound/run.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/lang_el.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/lang_el.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/lang_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/lang_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/views/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/views/GameMode.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/GameMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/views/PlayTurn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/views/PlayTurn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controller/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/GamePlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controller/PlayTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/PlayTurn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/lang_el.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/lang_el.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/lang_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/lang_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/views/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/GameMode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/PlayTurn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/PlayTurn.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +71,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="Quang1" />
-      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml,javafx.media" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;G:\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.controller.*" />
@@ -105,6 +107,7 @@
       <workItem from="1578893829131" duration="7000" />
       <workItem from="1578902948805" duration="1206000" />
       <workItem from="1578906735677" duration="7094000" />
+      <workItem from="1578932354140" duration="3799000" />
     </task>
     <task id="LOCAL-00001" summary="Play Turn sketch">
       <created>1578389354453</created>

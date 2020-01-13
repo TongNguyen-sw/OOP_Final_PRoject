@@ -18,6 +18,7 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
         currentStage=primaryStage;
+
     }
 
     public static void main(String[] args) {

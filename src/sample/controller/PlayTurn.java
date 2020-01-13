@@ -156,9 +156,9 @@ public class PlayTurn {
         UserData userData=new UserData();
         String playerNames[]=new String[4];
         playerNames[0]=yellowChart.getText();
-        playerNames[1]=greenChart.getText();
-        playerNames[2]=blueChart.getText();
-        playerNames[3]=redChart.getText();
+        playerNames[1]=blueChart.getText();
+        playerNames[2]=redChart.getText();
+        playerNames[3]=greenChart.getText();
         userData.setPlayerNames(playerNames);
         userData.setFirstPlayer(firstPlayer);
         userData.setNumberPlayers(numberPlayer);
@@ -168,14 +168,15 @@ public class PlayTurn {
     @FXML
     void rollDiceClicked(ActionEvent event) {
         if(i < 4){
+
             sound.playDiceSound();
             rotatedDice1();
             if(maxDiceValue<diceResult) {
                 firstPlayer=i;
                 maxDiceValue=diceResult;
             }
+            System.out.println(firstPlayer);
             playerText.setText("Player " + player[i]);
-
         }
 
         String diceStringResult = "";
@@ -194,7 +195,7 @@ public class PlayTurn {
                     if (j == i- 1){
                         rollDiceAgainNoti.setText(" ");
                         playerResult[i] = diceStringResult;
-                        greenResult.setText(diceStringResult);
+                        blueResult.setText(diceStringResult);
                         i++;
                     }
                 }
@@ -208,7 +209,7 @@ public class PlayTurn {
                     if (j == i- 1){
                         rollDiceAgainNoti.setText(" ");
                         playerResult[i] = diceStringResult;
-                        blueResult.setText(diceStringResult);
+                        redResult.setText(diceStringResult);
                         i++;
                     }
                 }
@@ -222,7 +223,7 @@ public class PlayTurn {
                     if (j == i- 1){
                         rollDiceAgainNoti.setText(" ");
                         playerResult[i] = diceStringResult;
-                        redResult.setText(diceStringResult);
+                        greenResult.setText(diceStringResult);
                         i++;
                     }
                 }
@@ -235,15 +236,18 @@ public class PlayTurn {
         yellowNameText.setText(yellowName.getText());
         if (yellowName.getText().equals("")){ yellowChart.setText("Player 1");  }
         else { yellowChart.setText(yellowName.getText()); }
-        greenNameText.setText(greenName.getText());
-        if (greenName.getText().equals("")){ greenChart.setText("Player 2");  }
-        else { greenChart.setText(greenName.getText());  }
         blueNameText.setText(blueName.getText());
-        if (blueName.getText().equals("")) {blueChart.setText("Player 3"); }
+        if (blueName.getText().equals("")) {blueChart.setText("Player 2"); }
         else { blueChart.setText(blueName.getText());  }
+        greenNameText.setText(greenName.getText());
         redNameText.setText(redName.getText());
-        if (redName.getText().equals("")){ redChart.setText("Player 4"); }
+        if (redName.getText().equals("")){ redChart.setText("Player 3"); }
         else { redChart.setText(redName.getText());  }
+        if (greenName.getText().equals("")){ greenChart.setText("Player 4");  }
+        else { greenChart.setText(greenName.getText());  }
+
+
+
     }
 
     private int diceResult;
