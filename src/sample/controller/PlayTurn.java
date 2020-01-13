@@ -17,8 +17,7 @@ import sample.controller.Sound;
 import sample.Main;
 
 import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 public class PlayTurn {
     private String[] player = {"Yellow" , "Green", "Blue", "Red"};
@@ -28,6 +27,7 @@ public class PlayTurn {
     private int maxDiceValue = 0;
     private int numberPlayer = 0;
     private Sound sound = new Sound();
+    private Locale locale;
 
     @FXML
     private Text playerText;
@@ -117,7 +117,6 @@ public class PlayTurn {
             timer.schedule(timerTask, 3000);
         }
     }
-
     public static class UserData{
         String playerNames[];
         int firstPlayer;
@@ -253,6 +252,8 @@ public class PlayTurn {
     public void initialize(){
         dice.setImage(new Image("file:src/Image/" + dice1.Rolldice() + ".png"));
         numberPlayer=(int)Main.currentStage.getUserData();
+        String lang = MainMenuController.langSet;
+        loadLang(lang);
     }
 
     private void rotatedDice1(){
@@ -267,4 +268,23 @@ public class PlayTurn {
         rt.play();
     }
 
+    public void loadLang(String lang){
+        locale = new Locale(lang);
+        ResourceBundle bundle = ResourceBundle.getBundle("sample.lang", locale);
+        rollDice.setText(bundle.getString("rollDice"));
+        PlayButton.setText(bundle.getString("play"));
+        setAllName.setText(bundle.getString("setAllNames"));
+//        yellowNameText.setText(bundle.getString("yellow"));
+//        yellowChart.setText(bundle.getString("yellow"));
+//        greenNameText.setText(bundle.getString("green"));
+//        greenChart.setText(bundle.getString("green"));
+//        blueNameText.setText(bundle.getString("blue"));
+//        blueChart.setText(bundle.getString("blue"));
+//        redNameText.setText(bundle.getString("red"));
+//        redChart.setText(bundle.getString("red"));
+//        yellowResult.setText("result");
+//        greenResult.setText("result");
+//        blueResult.setText("result");
+//        redResult.setText("result");
+    }
 }

@@ -32,10 +32,7 @@ import sample.Main;
 import sample.model.Player;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 public class GamePlay {
 
@@ -59,6 +56,7 @@ public class GamePlay {
 	RollDices d1 = new RollDices();
 	RollDices d2 = new RollDices();
 	Sound sound = new Sound();
+	private Locale locale;
 	private int finalValue;
 	private boolean chooseValue1 = true;
 	private boolean chooseValue2 = true;
@@ -76,6 +74,7 @@ public class GamePlay {
 	private Horse[] horses;
 	private AnchorPane homes[];
 	Timer timer = new Timer();
+	String lang = MainMenuController.langSet;
 
 	public void initialize(){
 		dice1.setImage(new Image("file:src/Image/" + d1.Rolldice() + ".png"));
@@ -85,8 +84,9 @@ public class GamePlay {
 		initPlayerNames();
 		initStackPanes();
 		setScore();
-		time();
+		//time();
 		initHorseAndHome();
+		loadLang(lang);
 	}
 
 	private void initHorseAndHome() {
@@ -438,18 +438,18 @@ public class GamePlay {
 			currentPlayer=0;
 	}
 
-	private void time(){
-		timer.schedule(new TimerTask() {
-			@Override
-			public void run() {
-				Platform.runLater(() -> {
-					timerText.setText(String.format("%02d:%02d:%02d", counter / 1000 / 60, (counter / 1000) % 60, (counter % 1000) / 10));
-					counter++;
-					time();
-				});
-			}
-		},1);
-	}
+//	private void time(){
+//		timer.schedule(new TimerTask() {
+//			@Override
+//			public void run() {
+//				Platform.runLater(() -> {
+//					timerText.setText(String.format("%02d:%02d:%02d", counter / 1000 / 60, (counter / 1000) % 60, (counter % 1000) / 10));
+//					counter++;
+//					time();
+//				});
+//			}
+//		},1);
+//	}
 
 	// what dice value can choose to go
 	private void setButtonsCanChoose(boolean [] value) {
@@ -522,12 +522,25 @@ public class GamePlay {
 	}
 
 	private void setScore() {
-		lb_score_player1.setText("Score: "+players[0].getScore());
-		lb_score_player2.setText("Score: "+players[1].getScore());
-		lb_score_player3.setText("Score: "+players[2].getScore());
-		lb_score_player4.setText("Score: "+players[3].getScore());
+		if (lang.equals("el")){
+			lb_score_player1.setText("Điểm: "+players[0].getScore());
+			lb_score_player2.setText("Điểm: "+players[1].getScore());
+			lb_score_player3.setText("Điểm: "+players[2].getScore());
+			lb_score_player4.setText("Điểm: "+players[3].getScore());
+		} else {
+			lb_score_player1.setText("Score: "+players[0].getScore());
+			lb_score_player2.setText("Score: "+players[1].getScore());
+			lb_score_player3.setText("Score: "+players[2].getScore());
+			lb_score_player4.setText("Score: "+players[3].getScore());
+		}
 	}
-
+	public void loadLang(String lang){
+		locale = new Locale(lang);
+		ResourceBundle bundle = ResourceBundle.getBundle("sample.lang", locale);
+		chooseBoth.setText(bundle.getString("chooseBoth"));
+		rolldice.setText(bundle.getString("rollDice"));
+		stop.setText(bundle.getString("stop"));
+	}
 }
 
 

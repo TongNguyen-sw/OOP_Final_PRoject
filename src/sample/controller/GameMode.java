@@ -7,22 +7,27 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import sample.Main;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class GameMode {
 
     @FXML
-    Button returnButton;
+    Button returnButton, startGame;
     @FXML
     CheckBox checkBox1, checkBox2, checkBox3, checkBox4, checkBox5;
     @FXML
-    Button startGame;
+    Text explanation;
 
     private int numberPlayers = 0;
+    private Locale locale;
+    String lang = MainMenuController.langSet;
 
     @FXML
     private void backButtonClicked() throws IOException {
@@ -41,6 +46,8 @@ public class GameMode {
 
     public void initialize() {
         startGame.setDisable(true);
+        loadLang(lang);
+
     }
 
     public void checkBox1Clicked() {
@@ -128,5 +135,15 @@ public class GameMode {
             checkBox2.setDisable(false);
         }
     }
-
+    public void loadLang(String lang){
+        locale = new Locale(lang);
+        ResourceBundle bundle = ResourceBundle.getBundle("sample.lang", locale);
+        startGame.setText(bundle.getString("play"));
+        checkBox1.setText(bundle.getString("check1"));
+        checkBox2.setText(bundle.getString("check2"));
+        checkBox3.setText(bundle.getString("check3"));
+        checkBox4.setText(bundle.getString("check4"));
+        checkBox5.setText(bundle.getString("check5"));
+        explanation.setText(bundle.getString("exp"));
+    }
 }

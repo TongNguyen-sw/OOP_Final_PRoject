@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="Language draft">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/lang_el.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/lang_el.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/lang_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/lang_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/views/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/views/GameMode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/GameMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/GamePlay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controller/PlayTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/PlayTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/lang_el.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/lang_el.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/lang_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/lang_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/GameMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/GameMode.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,18 +32,12 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="628" />
-    <option name="y" value="23" />
-    <option name="width" value="812" />
-    <option name="height" value="792" />
-  </component>
   <component name="ProjectId" id="1W3iUZxhK3xIv9uYumTjPjo4qIb" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578904188897" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Assignment2_OOP_VuThanhQuang_s3760192" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -101,7 +104,7 @@
       <workItem from="1578888335466" duration="136000" />
       <workItem from="1578893829131" duration="7000" />
       <workItem from="1578902948805" duration="1206000" />
-      <workItem from="1578906735677" duration="784000" />
+      <workItem from="1578906735677" duration="7094000" />
     </task>
     <task id="LOCAL-00001" summary="Play Turn sketch">
       <created>1578389354453</created>
@@ -162,16 +165,5 @@
     <MESSAGE value="This is lastest version. Clone and keep working" />
     <MESSAGE value="Language draft" />
     <option name="LAST_COMMIT_MESSAGE" value="Language draft" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sample/controller/MainMenuController.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

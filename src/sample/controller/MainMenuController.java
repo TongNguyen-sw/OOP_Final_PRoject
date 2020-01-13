@@ -18,6 +18,7 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class MainMenuController {
@@ -31,6 +32,7 @@ public class MainMenuController {
     private MenuItem vietnamese, english;
 
     private Locale locale;
+    static String langSet = "en";
 
     public void playClicked(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../views/GameMode.fxml"));
@@ -44,10 +46,12 @@ public class MainMenuController {
 
     @FXML
     void vietnameseClicked(ActionEvent actionEvent){
+        langSet = "el";
         loadLang("el");
     }
     @FXML
     void englishClicked(ActionEvent actionEvent){
+        langSet = "en";
         loadLang("en");
     }
 
@@ -84,8 +88,5 @@ public class MainMenuController {
         exit.setText(bundle.getString("exit"));
         language.setText(bundle.getString("language"));
         online.setText(bundle.getString("online"));
-    }
-    public void getLang(){
-        return langSet;
     }
 }
