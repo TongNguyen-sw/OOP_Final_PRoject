@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62b044e9-fa88-48c4-b116-de2eef563b17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/horseWhinny.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/roll.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Quang1/sample/sound/run.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/sound/horseWhinny.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/sound/roll.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/sound/run.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Quang1/sample/views/PlayTurn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Quang1/sample/views/PlayTurn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controller/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/GamePlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/PlayTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/PlayTurn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controller/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controller/Sound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/views/PlayTurn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/PlayTurn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/views/GamePlay.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +97,7 @@
       <workItem from="1578893829131" duration="7000" />
       <workItem from="1578902948805" duration="1206000" />
       <workItem from="1578906735677" duration="7094000" />
-      <workItem from="1578932354140" duration="3799000" />
+      <workItem from="1578932354140" duration="5271000" />
     </task>
     <task id="LOCAL-00001" summary="Play Turn sketch">
       <created>1578389354453</created>
@@ -130,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578907104245</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated sounds and fix player turn bugs">
+      <created>1578942631966</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578942631966</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +164,7 @@
     <MESSAGE value="Play Turn sketch" />
     <MESSAGE value="This is lastest version. Clone and keep working" />
     <MESSAGE value="Language draft" />
-    <option name="LAST_COMMIT_MESSAGE" value="Language draft" />
+    <MESSAGE value="Updated sounds and fix player turn bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated sounds and fix player turn bugs" />
   </component>
 </project>

@@ -52,7 +52,7 @@ public class GamePlay {
 	@FXML Label lb_player1, lb_player2, lb_player3, lb_player4, lb_score_player1, lb_score_player2, lb_score_player3, lb_score_player4;
 	@FXML Text timerText;
 	@FXML AnchorPane h1, h2, h3, h4;
-
+	@FXML Label status;
 	RollDices d1 = new RollDices();
 	RollDices d2 = new RollDices();
 	Sound sound = new Sound();
@@ -73,6 +73,7 @@ public class GamePlay {
 	private int counter = 0;
 	private Horse[] horses;
 	private AnchorPane homes[];
+
 	Timer timer = new Timer();
 	String lang = MainMenuController.langSet;
 
@@ -271,6 +272,7 @@ public class GamePlay {
 			//chooseValue1 = false;
 			System.out.println(finalValue);
 		}
+		status.setText(lb_currentplayername.getText() + " horse moves " + finalValue);
 		go(finalValue);
 	}
 
@@ -283,6 +285,7 @@ public class GamePlay {
 			System.out.println(finalValue);
 			//chooseValue2 = false;
 		}
+		status.setText(lb_currentplayername.getText() + " horse moves " + finalValue);
 		go(finalValue);
 	}
 
@@ -292,6 +295,7 @@ public class GamePlay {
 			finalValue = d1.getValue() + d2.getValue();
 			System.out.println(finalValue);
 		}
+		status.setText(lb_currentplayername.getText() + " horse moves " + finalValue);
 		go(finalValue);
 	}
 
@@ -350,6 +354,7 @@ public class GamePlay {
 		if(horse.isOnHouse()) {
 			if(d1.getValue()==6||d2.getValue()==6) {
 				sound.playOutNestSound();
+				status.setText("Player " + lb_currentplayername.getText() + " horse is out");
 				horse.setOnHouse(false);
 				horse.setPosition(horse.getPosition()+12*currentPlayer);
 				thread=new MyThread(1, horse);
