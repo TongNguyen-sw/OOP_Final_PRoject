@@ -10,9 +10,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.GaussianBlur;
@@ -36,22 +39,25 @@ import java.util.TimerTask;
 
 public class GamePlay {
 
-    @FXML Button stop;
-    @FXML ImageView dice1;
-    @FXML ImageView dice2;
-    @FXML Button rolldice;
-    @FXML ImageView value1;
-    @FXML ImageView value2;
-    @FXML SplitPane gamePlay;
-    @FXML Button chooseBoth;
+    @FXML private Button stop;
+    @FXML private ImageView dice1;
+    @FXML private ImageView dice2;
+    @FXML private Button rolldice;
+    @FXML private ImageView value1;
+    @FXML private ImageView value2;
+    @FXML private SplitPane gamePlay;
+    @FXML private Button chooseBoth;
     @FXML private Label lb_currentplayername;
     @FXML private ImageView yh0, yh1, yh2, yh3, gh0, gh1, gh2, gh3, bh0, bh1, bh2, bh3, rh0, rh1, rh2, rh3;
+    
     @FXML private StackPane c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17
     , c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28, c29, c30, c31, c32
-    , c33, c34, c35, c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47;
-    @FXML Label lb_player1, lb_player2, lb_player3, lb_player4, lb_score_player1, lb_score_player2, lb_score_player3, lb_score_player4;
-    @FXML Text timerText;
-    @FXML AnchorPane h1, h2, h3, h4;
+    , c33, c34, c35, c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47
+    , y1, y2, y3, y4, y5, y6, b1, b2, b3, b4, b5, b6, r1, r2, r3, r4, r5, r6, g1, g2, g3, g4, g5, g6;
+    
+    @FXML private Label lb_player1, lb_player2, lb_player3, lb_player4, lb_score_player1, lb_score_player2, lb_score_player3, lb_score_player4, lb_status;
+    @FXML private Text timerText;
+    @FXML private AnchorPane h1, h2, h3, h4;
 
     RollDices d1 = new RollDices();
     RollDices d2 = new RollDices();
@@ -84,11 +90,26 @@ public class GamePlay {
         setScore();
         time();
         initHorseAndHome();
+        if(players[currentPlayer].isMachine()){
+        	sound.playDiceSound();
+        	blockAllControls();
+        	players[currentPlayer].rollDices();
+        }
     }
     
-    private void initHorseAndHome() {
+    //block control when machine roll
+    private void blockAllControls() {
 		// TODO Auto-generated method stub
-    	horses=new Horse[48];
+		rolldice.setDisable(true);
+		chooseBoth.setDisable(true);
+		value1.setDisable(true);
+		value2.setDisable(true);
+	}
+
+    //initialize horse and home
+	private void initHorseAndHome() {
+		// TODO Auto-generated method stub
+    	horses=new Horse[72];
         homes=new AnchorPane[4];
         homes[0]=h1;
         homes[1]=h2;
@@ -96,9 +117,10 @@ public class GamePlay {
         homes[3]=h4;
 	}
 
+	//class execute move funtion
 	class MyThread extends Thread{
-    	int to;
-    	Horse horse;
+    	int to; // number step 
+    	Horse horse; // which horse
     	public MyThread( int _to, Horse _horse) {
 			this.to=_to;
 			this.horse=_horse;
@@ -109,31 +131,62 @@ public class GamePlay {
     	public void run() {
     	     timeline= new Timeline(new KeyFrame(Duration.millis(350), ev -> {
     	    	interval--;
+    	    	// end move function
     	    	if(interval<0) {
-	 	    		increaseCurrentPlayerIndex();
+    	    		//two dice not same increase player index-> next player
+    	    		if(d1.getValue()!=d2.getValue())
+    	    			increaseCurrentPlayerIndex();
 	 	    		rolldice.setDisable(false);
 	 	    		lb_currentplayername.setText(playerNames[currentPlayer]);
 	 	    		timeline.stop();
 	 	    		thread.stop();
 	 	    		int currentHorseindexInArray=horse.getPosition();
 	 	    		Horse currentHorse=horses[currentHorseindexInArray];
+	 	    		
+	 	    		//kick current horse
 	 	    		if(currentHorse!=null) {
 	 	    			currentHorse.setPosition(0);
 	 	    			currentHorse.setOnHouse(true);
-	 	    			homes[currentHorse.getPlayerIndex()].getChildren().add(currentHorse.getImgHorse());
+	 	    			currentHorse.setBackHome(false);
+	 	    			if(!homes[currentHorse.getPlayerIndex()].getChildren().contains(currentHorse.getImgHorse()))
+	 	    				homes[currentHorse.getPlayerIndex()].getChildren().add(currentHorse.getImgHorse());
 	 	    			players[currentHorse.getPlayerIndex()].setScore(players[currentHorse.getPlayerIndex()].getScore()-2);
 	 	    			players[horse.getPlayerIndex()].setScore(players[horse.getPlayerIndex()].getScore()+2);
+	 	    			lb_status.setText(playerNames[horse.getPlayerIndex()]+" kick "+playerNames[currentHorse.getPlayerIndex()]);
 	 	    		}
-	 	    		if(horse.getPosition()!=0)
+	 	    		else {
+	 	    			lb_status.setText("");
+	 	    		}
+	 	    		
+	 	    		//update horse status
+	 	    		if(!horse.isOnHouse())
 	 	    			horses[currentHorseindexInArray]= horse;
+	 	    		
+	 	    		//update score
 	 	    		setScore();
+	 	    		
+	 	    		//handler for machine
+	 	    		if(players[currentPlayer].isMachine()) {
+	 	    			sound.playDiceSound();
+	 	    			blockAllControls();
+	    				players[currentPlayer].rollDices();
+	    			}
+	 	    		
+	 	    		//check and block if go for another round
+	 	    		if(horse.getPosition()==horse.getLimit()-1)
+	 	    			horse.setBackHome(true);
 	 	    		return;
 	         	}
     	    	else {
+    	    		//update horse per step
         	    	this.horse.increasePosition();
-        	    	if(this.horse.getPosition()>47)
+        	    	if(this.horse.getPosition()>71)
         	    		this.horse.setPosition(0);
         	    	int horsePosition=this.horse.getPosition();
+        	    	if(!this.horse.isBackHome()) {
+        	    		if(horsePosition==0||horsePosition==18||horsePosition==36||horsePosition==54)
+        	    			this.horse.setPosition(horsePosition+6);
+        	    	}
      	        	StackPane sp=stackPanes.get(horsePosition);
     	    		ImageView imgv=this.horse.getImgHorse();
     	        	sp.getChildren().add(imgv);
@@ -144,10 +197,16 @@ public class GamePlay {
     	}
     }
     
+	//initialize stack pane array
     private void initStackPanes() {
-		// TODO Auto-generated method stub
 		stackPanes=new ArrayList<StackPane>();
 		stackPanes.add(c0);
+		stackPanes.add(y1);
+		stackPanes.add(y2);
+		stackPanes.add(y3);
+		stackPanes.add(y4);
+		stackPanes.add(y5);
+		stackPanes.add(y6);
 		stackPanes.add(c1);
 		stackPanes.add(c2);
 		stackPanes.add(c3);
@@ -160,6 +219,12 @@ public class GamePlay {
 		stackPanes.add(c10);
 		stackPanes.add(c11);
 		stackPanes.add(c12);
+		stackPanes.add(b1);
+		stackPanes.add(b2);
+		stackPanes.add(b3);
+		stackPanes.add(b4);
+		stackPanes.add(b5);
+		stackPanes.add(b6);
 		stackPanes.add(c13);
 		stackPanes.add(c14);
 		stackPanes.add(c15);
@@ -172,6 +237,12 @@ public class GamePlay {
 		stackPanes.add(c22);
 		stackPanes.add(c23);
 		stackPanes.add(c24);
+		stackPanes.add(r1);
+		stackPanes.add(r2);
+		stackPanes.add(r3);
+		stackPanes.add(r4);
+		stackPanes.add(r5);
+		stackPanes.add(r6);
 		stackPanes.add(c25);
 		stackPanes.add(c26);
 		stackPanes.add(c27);
@@ -184,6 +255,12 @@ public class GamePlay {
 		stackPanes.add(c34);
 		stackPanes.add(c35);
 		stackPanes.add(c36);
+		stackPanes.add(g1);
+		stackPanes.add(g2);
+		stackPanes.add(g3);
+		stackPanes.add(g4);
+		stackPanes.add(g5);
+		stackPanes.add(g6);
 		stackPanes.add(c37);
 		stackPanes.add(c38);
 		stackPanes.add(c39);
@@ -195,8 +272,10 @@ public class GamePlay {
 		stackPanes.add(c45);
 		stackPanes.add(c46);
 		stackPanes.add(c47);
+		System.out.println("Size: "+stackPanes.size());
 	}
 
+    //load all player names
 	private void initPlayerNames() {
 		// TODO Auto-generated method stub
     	lb_player1.setText(playerNames[0]);
@@ -267,6 +346,7 @@ public class GamePlay {
             //chooseValue1 = false;
             System.out.println(finalValue);
         }
+        lb_status.setText(playerNames[currentPlayer]+" move "+finalValue);
         go(finalValue);
     }
 
@@ -279,6 +359,7 @@ public class GamePlay {
             System.out.println(finalValue);
             //chooseValue2 = false;
         } 
+        lb_status.setText(playerNames[currentPlayer]+" move "+finalValue);
         go(finalValue);
     }
 
@@ -288,6 +369,7 @@ public class GamePlay {
             finalValue = d1.getValue() + d2.getValue();
             System.out.println(finalValue);
         }
+        lb_status.setText(playerNames[currentPlayer]+" move "+finalValue);
         go(finalValue);
     }
 
@@ -310,6 +392,7 @@ public class GamePlay {
             dice2.setImage(new Image("file:src/Image/" + d2.Rolldice() + ".png"));
             value2.setImage(new Image("file:src/Image/" + d2.getValue() + ".png"));
             sound.stopDiceSound();
+            //check which way current horse can go 
             Horse horse;
             for(int i=0;i<4;i++) {
     			horse=players[currentPlayer].getHorses()[i];
@@ -325,6 +408,9 @@ public class GamePlay {
     			}
     			else {
     				checkFirstStep(horse);
+    				if(players[currentPlayer].isMachine()) {
+    					 
+        			}
     			}
     			break;
             }
@@ -339,14 +425,13 @@ public class GamePlay {
         players[currentPlayer].rollDices();
     	resetDisableButton(false);
     }
-
+    
     private void checkFirstStep(Horse horse) {
-		// TODO Auto-generated method stub
-       
 		if(horse.isOnHouse()) {
 			if(d1.getValue()==6||d2.getValue()==6) {
 				horse.setOnHouse(false);
-				horse.setPosition(horse.getPosition()+12*currentPlayer);
+				horse.setPosition(horse.getPosition()+12*currentPlayer+(currentPlayer+1)*6);
+				lb_status.setText(playerNames[currentPlayer]+" start");
 				thread=new MyThread(1, horse);
 				thread.start();
 				resetDisableButton(true);
@@ -411,7 +496,7 @@ public class GamePlay {
     	}
     }
 
-    //check rules and go seahorse
+    //sea horse go
     private void go(int finalValue2) {
     	resetDisableButton(true);
     	rolldice.setDisable(true);
@@ -428,13 +513,14 @@ public class GamePlay {
 		}
 	}
     
-    //set index to know what index of players in players is current player
+    //increase index of players-> next player
     private void increaseCurrentPlayerIndex() {
     	currentPlayer++;
     	if(currentPlayer>3)
         	currentPlayer=0;
     }
 
+    //timer
     private void time(){
         timer.schedule(new TimerTask() {
             @Override
@@ -448,10 +534,8 @@ public class GamePlay {
         },1);
     }
     
-    // what dice value can choose to go
+    // which dice value can choose to go
     private void setButtonsCanChoose(boolean [] value) {
-//    	this.value1.setDisable(!value[0]);
-//    	this.value2.setDisable(!value[1]);
     	BoxBlur boxblur = new BoxBlur();
     	ColorAdjust colorAdjust = new ColorAdjust();
     	if(value[0]==true) {
@@ -479,6 +563,8 @@ public class GamePlay {
     	}
     }
     
+    
+    //check which way the horse can go
     private boolean[] checkCanGo(Horse horse, int number1, int number2) {
     	boolean result[]=new boolean[3];
     	for(int i=0;i<3;i++) {
@@ -488,31 +574,58 @@ public class GamePlay {
     	for(Horse h:horses) {
     		if(h==null)
     			continue;
-    		int max=currentPosition+number1;
-    		int localPosition=h.getPosition();
-    		if(localPosition>currentPosition&&localPosition<max) {
-    			result[0]=false;
-    			break;
+    		if(horse.isBackHome()) {
+
+    		}
+    		else {
+    			int max=currentPosition+number1;
+        		if((currentPosition<horse.getLimit()&&max>horse.getLimit())||(horse.getLimit()==0&&currentPosition>66)){
+        			result[0]=false;
+        			break;
+        		}
+        		int localPosition=h.getPosition();
+        		if(localPosition>currentPosition&&localPosition<max) {
+        			result[0]=false;
+        			break;
+        		}
     		}
     	}
     	for(Horse h:horses) {
     		if(h==null)
     			continue;
-    		int max=currentPosition+number2;
-    		int localPosition=h.getPosition();
-    		if(localPosition>currentPosition&&localPosition<max) {
-    			result[1]=false;
-    			break;
+    		if(horse.isBackHome()) {
+    			
+    		}
+    		else {
+    			int max=currentPosition+number2;
+        		if((currentPosition<horse.getLimit()&&max>horse.getLimit())||(horse.getLimit()==0&&currentPosition>66)){
+        			result[1]=false;
+        			break;
+        		}
+        		int localPosition=h.getPosition();
+        		if(localPosition>currentPosition&&localPosition<max) {
+        			result[1]=false;
+        			break;
+        		}	
     		}
     	}
     	for(Horse h:horses) {
     		if(h==null)
     			continue;
-    		int max=currentPosition+number2+number1;
-    		int localPosition=h.getPosition();
-    		if(localPosition>currentPosition&&localPosition<max) {
-    			result[2]=false;
-    			break;
+    		if(horse.isBackHome()) {
+    			
+    		}
+    		else {
+    			int max=currentPosition+number2+number1;
+        		if((currentPosition<horse.getLimit()&&max>horse.getLimit())||(horse.getLimit()==0&&currentPosition>66)){
+        			result[2]=false;
+        			break;
+        		}
+        		int localPosition=h.getPosition();
+        		if(localPosition>currentPosition&&localPosition<max) {
+        			result[2]=false;
+        			break;
+        		}
     		}
     	}
     	return result;

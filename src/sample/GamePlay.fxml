@@ -307,12 +307,36 @@
                     <children>
                         <AnchorPane prefHeight="250.0" prefWidth="138.0">
                             <children>
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="8.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="51.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="94.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="137.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="180.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="223.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                        <StackPane fx:id="r6" layoutX="6.0" layoutY="8.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="8.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="r5" layoutX="6.0" layoutY="51.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="51.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="r4" layoutX="6.0" layoutY="94.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="94.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="r3" layoutX="6.0" layoutY="137.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="137.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="r2" layoutX="6.0" layoutY="180.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="r1" layoutX="6.0" layoutY="223.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="43.0" layoutX="6.0" layoutY="223.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
                                 <Label layoutX="54.0" layoutY="211.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="1" />
                                 <Label layoutX="54.0" layoutY="168.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="2" />
                                 <Label layoutX="54.0" layoutY="125.0" prefHeight="27.0" prefWidth="31.0" stylesheets="@../css/label.css" text="3" />
@@ -327,12 +351,36 @@
                     <children>
                         <AnchorPane prefHeight="117.0" prefWidth="261.0">
                             <children>
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="5.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="49.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="93.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="137.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="181.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="225.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="45.0" />
+                        <StackPane fx:id="g6" layoutX="5.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="5.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="g5" layoutX="49.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="49.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="g4" layoutX="93.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="93.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="g3" layoutX="137.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="137.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="g2" layoutX="181.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="181.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="g1" layoutX="225.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#37ff00" height="116.0" layoutX="225.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="45.0" />
+                           </children>
+                        </StackPane>
                                 <Label layoutX="12.0" layoutY="25.0" prefHeight="72.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="6" />
                                 <Label layoutX="56.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="5" />
                                 <Label layoutX="232.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="-90.0" stylesheets="@../css/label.css" text="1" />
@@ -347,12 +395,36 @@
                     <children>
                         <AnchorPane prefHeight="117.0" prefWidth="259.0">
                             <children>
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="44.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="88.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="132.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="176.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="220.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                        <StackPane fx:id="b1" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="b2" layoutX="44.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="44.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="b3" layoutX="88.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="88.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="b4" layoutX="132.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="132.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="b5" layoutX="176.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="176.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="b6" layoutX="220.0" layoutY="1.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="116.0" layoutX="220.0" layoutY="1.0" stroke="WHITE" strokeType="INSIDE" width="44.0" />
+                           </children>
+                        </StackPane>
                                 <Label layoutX="227.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="6" />
                                 <Label layoutX="183.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="5" />
                                 <Label layoutX="139.0" layoutY="25.0" prefHeight="27.0" prefWidth="31.0" rotate="90.0" stylesheets="@../css/label.css" text="4" />
@@ -367,12 +439,36 @@
                     <children>
                         <AnchorPane prefHeight="250.0" prefWidth="138.0">
                             <children>
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="8.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="51.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="94.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="137.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="180.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="223.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                        <StackPane fx:id="y1" layoutX="6.0" layoutY="8.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="8.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="y2" layoutX="6.0" layoutY="51.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="51.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="y3" layoutX="6.0" layoutY="94.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="94.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="y4" layoutX="6.0" layoutY="137.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="137.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="y5" layoutX="6.0" layoutY="180.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="180.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="y6" layoutX="6.0" layoutY="223.0">
+                           <children>
+                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff604" height="43.0" layoutX="6.0" layoutY="223.0" stroke="WHITE" strokeType="INSIDE" width="132.0" />
+                           </children>
+                        </StackPane>
                                 <Label layoutX="57.0" layoutY="-4.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="1" />
                                 <Label layoutX="57.0" layoutY="39.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="2" />
                                 <Label layoutX="57.0" layoutY="82.0" prefHeight="27.0" prefWidth="31.0" rotate="-180.0" stylesheets="@../css/label.css" text="3" />
@@ -542,6 +638,12 @@
                         <Font size="26.0" />
                      </font>
                   </Text>
+                  <Label layoutX="26.0" layoutY="215.0" text="Status: " AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_status" layoutX="157.0" layoutY="217.0" textFill="#4c7220" AnchorPane.rightAnchor="10.0" />
                     </children>
                 </AnchorPane>
             </children>

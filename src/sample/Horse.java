@@ -10,15 +10,9 @@ public class Horse {
 	private boolean isOnHouse;
 	private boolean isFinished;
 	private int playerIndex;
+	private int limit;
+	private boolean backHome;
 	
-	public int getPlayerIndex() {
-		return playerIndex;
-	}
-
-	public void setPlayerIndex(int playerIndex) {
-		this.playerIndex = playerIndex;
-	}
-
 	public Horse(ImageView imgHorse, int position, boolean isOnHouse) {
 		super();
 		this.imgHorse = imgHorse;
@@ -33,6 +27,8 @@ public class Horse {
 		this.isOnHouse = isOnHouse;
 		this.isFinished=false;
 		this.playerIndex=playerIndex;
+		this.limit=playerIndex*12+playerIndex*6+1;
+		this.backHome=false;
 	}
 
 	public Horse() {
@@ -73,4 +69,28 @@ public class Horse {
 		this.position++;
 	}
 	
+	public int getPlayerIndex() {
+		return playerIndex;
+	}
+
+	public void setPlayerIndex(int playerIndex) {
+		this.playerIndex = playerIndex;
+	}
+
+	public int getLimit() {
+		return limit;
+	}
+
+	public void setLimit(int limit) {
+		this.limit = limit;
+	}
+
+	public boolean isBackHome() {
+		return backHome;
+	}
+
+	public void setBackHome(boolean backHome) {
+		this.backHome = backHome;
+	}
+
 }
