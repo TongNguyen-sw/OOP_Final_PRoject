@@ -2,6 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -11,22 +13,27 @@
    <children>
       <VBox layoutX="359.0" layoutY="172.0" prefHeight="355.0" prefWidth="252.0">
          <children>
-            <Button fx:id="play" mnemonicParsing="false" onAction="#playClicked" prefHeight="80.0" prefWidth="252.0" stylesheets="@../css/buttons.css" text="Play">
+            <Button fx:id="play" mnemonicParsing="false" onAction="#playClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../../css/buttons.css" text="Play">
                <VBox.margin>
                   <Insets bottom="8.0" />
                </VBox.margin>
                <font>
                   <Font size="2130.0" />
                </font></Button>
-            <Button fx:id="online" mnemonicParsing="false" onAction="#onlineClicked" prefHeight="86.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Online Mode">
+            <Button fx:id="online" mnemonicParsing="false" onAction="#onlineClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../../css/buttons.css" text="Online Mode">
                <VBox.margin>
                   <Insets bottom="8.0" />
                </VBox.margin></Button>
-            <Button fx:id="language" mnemonicParsing="false" onAction="#languageClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Language">
+            <MenuButton fx:id="language" alignment="CENTER" mnemonicParsing="false" prefHeight="85.0" prefWidth="250.0" stylesheets="@../../css/menuButton.css" text="Language">
+              <items>
+                <MenuItem fx:id="vietnamese" mnemonicParsing="false" onAction="#vietnameseClicked" text="Vietnamese" />
+                <MenuItem fx:id="english" mnemonicParsing="false" onAction="#englishClicked" text="English" />
+              </items>
                <VBox.margin>
-                  <Insets bottom="8.0" />
-               </VBox.margin></Button>
-            <Button fx:id="exit" mnemonicParsing="false" onAction="#exitClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../css/buttons.css" text="Exit" />
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </MenuButton>
+            <Button fx:id="exit" mnemonicParsing="false" onAction="#exitClicked" prefHeight="85.0" prefWidth="250.0" stylesheets="@../../css/buttons.css" text="Exit" />
          </children>
       </VBox>
       <Text fill="#3c3a46" layoutX="286.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Race Chess">
